@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assel Csonka-Stambekova | Education Consultant & Tutor, Dubai</title>
+<meta name="description" content="Expert English tutoring, school readiness, and private school consulting for families in Dubai. PhD-qualified educator with 15+ years of experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --cream-dark: #F0EAE0;
+    --navy: #1A2744;
+    --navy-light: #263556;
+    --gold: #C49A4A;
+    --gold-light: #D4AF6A;
+    --warm-text: #3D3530;
+    --muted: #8A7F75;
+    --white: #FFFFFF;
+    --border: rgba(196,154,74,0.25);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--warm-text);
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ─── TYPOGRAPHY ─── */
+  .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+  h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; line-height: 1.15; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem;
+    background: rgba(250,247,242,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: box-shadow 0.3s;
+  }
+
+  nav.scrolled { box-shadow: 0 2px 30px rgba(26,39,68,0.08); }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex; gap: 2.5rem; list-style: none; align-items: center;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--warm-text);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    padding: 0.55rem 1.4rem;
+    border-radius: 2px;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--gold) !important; color: var(--white) !important; }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); transition: 0.3s; }
+
+  /* ─── HERO ─── */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: linear-gradient(135deg, var(--cream) 55%, var(--navy) 55%);
+  }
+
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 45%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C49A4A' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  }
+
+  .hero-left {
+    position: relative; z-index: 1;
+    padding: 5rem 4rem 5rem 5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.9s 0.2s forwards;
+  }
+
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gold);
+  }
+
+  .hero-title {
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+  }
+
+  .hero-title em { font-style: italic; color: var(--gold); }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.85rem 2rem;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+    border: 2px solid var(--navy);
+  }
+
+  .btn-primary:hover { background: var(--gold); border-color: var(--gold); transform: translateY(-2px); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--navy);
+    padding: 0.85rem 2rem;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    border: 2px solid var(--navy);
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-secondary:hover { background: var(--navy); color: var(--white); }
+
+  .hero-stats {
+    display: flex; gap: 2.5rem; margin-top: 3.5rem;
+    padding-top: 2.5rem; border-top: 1px solid var(--border);
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .stat-label { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.06em; margin-top: 0.25rem; }
+
+  .hero-right {
+    position: relative; z-index: 1;
+    display: flex; align-items: center; justify-content: center;
+    padding: 5rem 4rem;
+    opacity: 0;
+    animation: fadeIn 1s 0.5s forwards;
+  }
+
+  .hero-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(196,154,74,0.3);
+    border-radius: 4px;
+    padding: 2.5rem;
+    max-width: 380px;
+    backdrop-filter: blur(8px);
+  }
+
+  .hero-card-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  .hero-card-author {
+    display: flex; align-items: center; gap: 1rem;
+  }
+
+  .hero-avatar {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--white);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  .hero-card-name { color: var(--white); font-weight: 500; font-size: 0.9rem; }
+  .hero-card-title { color: rgba(255,255,255,0.55); font-size: 0.78rem; margin-top: 2px; }
+
+  .credentials-row {
+    display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.8rem;
+    padding-top: 1.8rem; border-top: 1px solid rgba(196,154,74,0.2);
+  }
+
+  .credential-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    border: 1px solid rgba(196,154,74,0.35);
+    padding: 0.3rem 0.7rem;
+    border-radius: 2px;
+  }
+
+  /* ─── SECTIONS COMMON ─── */
+  section { padding: 6rem 5rem; }
+
+  .section-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    color: var(--navy);
+    margin-bottom: 1.2rem;
+  }
+
+  .section-lead {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 600px;
+    font-weight: 300;
+  }
+
+  /* ─── ABOUT ─── */
+  #about {
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    padding: 6rem 5rem;
+  }
+
+  .about-text p { color: var(--warm-text); margin-bottom: 1.2rem; font-size: 0.97rem; }
+
+  .about-pillars {
+    display: flex; flex-direction: column; gap: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .pillar {
+    display: flex; gap: 1.2rem; align-items: flex-start;
+    padding: 1.2rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .pillar:hover { border-color: var(--gold); box-shadow: 0 4px 20px rgba(196,154,74,0.1); }
+
+  .pillar-icon {
+    width: 40px; height: 40px; flex-shrink: 0;
+    background: var(--cream);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .pillar-title { font-weight: 500; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.2rem; }
+  .pillar-text { font-size: 0.85rem; color: var(--muted); }
+
+  .credentials-list {
+    background: var(--cream);
+    border-radius: 4px;
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+  }
+
+  .credentials-list h3 {
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .credential-item {
+    display: flex; gap: 0.8rem; align-items: flex-start;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(196,154,74,0.1);
+    font-size: 0.88rem;
+    color: var(--warm-text);
+  }
+
+  .credential-item:last-child { border-bottom: none; }
+
+  .credential-item::before {
+    content: '—';
+    color: var(--gold);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  /* ─── SERVICES ─── */
+  #services {
+    background: var(--cream);
+    padding: 6rem 5rem;
+  }
+
+  .services-header { text-align: center; margin-bottom: 4rem; }
+  .services-header .section-lead { margin: 0 auto; }
+
+  .services-tabs {
+    display: flex; justify-content: center; gap: 0; margin-bottom: 3rem;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    width: fit-content;
+    margin: 0 auto 3rem;
+    overflow: hidden;
+  }
+
+  .tab-btn {
+    padding: 0.75rem 2.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: var(--muted);
+    transition: all 0.2s;
+  }
+
+  .tab-btn.active { background: var(--navy); color: var(--white); }
+  .tab-btn:hover:not(.active) { background: var(--cream-dark); color: var(--navy); }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .services-grid-2col { grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto; }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem;
+    transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 0;
+    background: var(--gold);
+    transition: height 0.3s;
+  }
+
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(26,39,68,0.1); border-color: var(--gold); }
+  .service-card:hover::before { height: 100%; }
+
+  .service-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+
+  .service-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+
+  .service-age {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+    margin-bottom: 0.8rem;
+  }
+
+  .service-desc { font-size: 0.88rem; color: var(--muted); margin-bottom: 1.2rem; }
+
+  .service-bullets { list-style: none; }
+  .service-bullets li {
+    font-size: 0.83rem;
+    color: var(--warm-text);
+    padding: 0.3rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+
+  .service-bullets li::before {
+    content: '›';
+    position: absolute; left: 0;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* ─── WHY ─── */
+  #why {
+    background: var(--navy);
+    padding: 6rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #why::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,154,74,0.08) 0%, transparent 70%);
+  }
+
+  #why .section-title { color: var(--white); }
+  #why .section-lead { color: rgba(255,255,255,0.5); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .why-card {
+    border: 1px solid rgba(196,154,74,0.2);
+    border-radius: 4px;
+    padding: 2rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .why-card:hover { border-color: var(--gold); background: rgba(196,154,74,0.04); }
+
+  .why-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--gold);
+    opacity: 0.4;
+    line-height: 1;
+    margin-bottom: 0.8rem;
+  }
+
+  .why-title { font-size: 1rem; font-weight: 500; color: var(--white); margin-bottom: 0.5rem; }
+  .why-text { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+
+  /* ─── HOW IT WORKS ─── */
+  #process {
+    background: var(--cream-dark);
+    padding: 6rem 5rem;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3.5rem;
+    position: relative;
+  }
+
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 35px; left: 16.66%;
+    width: 66.66%; height: 1px;
+    background: var(--border);
+  }
+
+  .step {
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .step-number {
+    width: 70px; height: 70px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1.5rem;
+    position: relative; z-index: 1;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--gold);
+  }
+
+  .step-title { font-size: 1.15rem; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; }
+  .step-text { font-size: 0.85rem; color: var(--muted); }
+
+  /* ─── FAQ ─── */
+  #faq {
+    background: var(--white);
+    padding: 6rem 5rem;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--navy);
+    background: var(--cream);
+    gap: 1rem;
+    user-select: none;
+  }
+
+  .faq-question::after {
+    content: '+';
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--gold);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  .faq-item.open .faq-question::after { transform: rotate(45deg); }
+
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s;
+    font-size: 0.86rem;
+    color: var(--muted);
+    padding: 0 1.5rem;
+  }
+
+  .faq-item.open .faq-answer { max-height: 200px; padding: 1rem 1.5rem 1.2rem; }
+
+  /* ─── CONTACT ─── */
+  #contact {
+    background: var(--cream);
+    padding: 6rem 5rem;
+  }
+
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 5rem;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .contact-info h2 { font-size: 2.5rem; color: var(--navy); margin-bottom: 1rem; }
+  .contact-info p { font-size: 0.95rem; color: var(--muted); margin-bottom: 2rem; font-weight: 300; }
+
+  .contact-details { display: flex; flex-direction: column; gap: 1rem; }
+
+  .contact-detail {
+    display: flex; gap: 0.8rem; align-items: center;
+    font-size: 0.88rem; color: var(--warm-text);
+  }
+
+  .contact-detail-icon {
+    width: 36px; height: 36px;
+    background: var(--navy);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .contact-form {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2.5rem;
+  }
+
+  .form-title { font-size: 1.4rem; color: var(--navy); margin-bottom: 1.8rem; font-family: 'Cormorant Garamond', serif; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .form-group { margin-bottom: 1.2rem; }
+
+  .form-group label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--warm-text);
+    background: var(--cream);
+    transition: border-color 0.2s;
+    outline: none;
+    appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); background: var(--white); }
+
+  .form-group textarea { resize: vertical; min-height: 110px; }
+
+  .form-submit {
+    width: 100%;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    padding: 0.9rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 0.5rem;
+  }
+
+  .form-submit:hover { background: var(--gold); transform: translateY(-1px); }
+
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy);
+    padding: 2.5rem 5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--white);
+    font-weight: 400;
+  }
+
+  .footer-logo span { color: var(--gold); }
+
+  .footer-text { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 0.75rem; color: rgba(255,255,255,0.4); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1024px) {
+    nav { padding: 1.2rem 2rem; }
+    #hero { grid-template-columns: 1fr; }
+    .hero-bg { background: linear-gradient(160deg, var(--cream) 60%, var(--navy) 60%); }
+    .hero-bg::before { width: 100%; height: 40%; top: auto; bottom: 0; }
+    .hero-left { padding: 5rem 2rem 3rem; }
+    .hero-right { padding: 2rem; }
+    #about { grid-template-columns: 1fr; padding: 4rem 2rem; gap: 3rem; }
+    section { padding: 4rem 2rem; }
+    #services { padding: 4rem 2rem; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+    .process-steps::before { display: none; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .contact-wrapper { grid-template-columns: 1fr; gap: 3rem; }
+    footer { padding: 2rem; flex-direction: column; text-align: center; }
+    #why { padding: 4rem 2rem; }
+    #process { padding: 4rem 2rem; }
+    #faq { padding: 4rem 2rem; }
+    #contact { padding: 4rem 2rem; }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: fixed; top: 70px; left: 0; right: 0; background: var(--cream); padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); gap: 1rem; z-index: 99; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; }
+    .services-grid { grid-template-columns: 1fr; }
+    .services-grid-2col { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">Assel <span>.</span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Assel</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact" class="nav-cta">Book a Call</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-left">
+    <span class="hero-eyebrow">Education Consultant · Dubai</span>
+    <h1 class="hero-title">Give Your Child the Start<br><em>They Deserve</em></h1>
+    <p class="hero-subtitle">Expert tutoring and private school guidance for Dubai families — backed by PhD-level research and 15+ years in classrooms and school leadership.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Book a Free 20-Min Call</a>
+      <a href="#services" class="btn-secondary">Explore Services</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-number serif">15+</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div>
+        <div class="stat-number serif">5</div>
+        <div class="stat-label">Countries Lived & Taught</div>
+      </div>
+      <div>
+        <div class="stat-number serif">PhD</div>
+        <div class="stat-label">Teacher Education</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-card">
+      <p class="hero-card-quote">"The right foundation at the right age changes everything."</p>
+      <div class="hero-card-author">
+        <div class="hero-avatar">A</div>
+        <div>
+          <div class="hero-card-name">Assel Csonka-Stambekova</div>
+          <div class="hero-card-title">Ph.D. · CELTA · IH Certified</div>
+        </div>
+      </div>
+      <div class="credentials-row">
+        <span class="credential-tag">CELTA</span>
+        <span class="credential-tag">IH Young Learners</span>
+        <span class="credential-tag">MSc Leadership</span>
+        <span class="credential-tag">Dubai Based</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-text reveal">
+    <div class="section-eyebrow">About</div>
+    <h2 class="section-title">Teacher. Researcher.<br>Your Family's Advocate.</h2>
+    <p>I'm Assel — a PhD-qualified educator, certified English teacher, and former school vice-principal. I've spent over 15 years working inside schools across Kazakhstan, Hungary, India, and the UAE. I know how education systems work from the inside — and I use that knowledge to help your child thrive.</p>
+    <p>Whether you need focused tutoring for your child or clear-headed advice on navigating Dubai's complex school landscape, I offer something rare: deep academic expertise combined with genuine, hands-on classroom experience.</p>
+    <p>I don't do one-size-fits-all. Every child is different, every family has different priorities, and my job is to understand yours.</p>
+    <div class="about-pillars">
+      <div class="pillar">
+        <div class="pillar-icon">🔬</div>
+        <div>
+          <div class="pillar-title">Research-Backed Approach</div>
+          <div class="pillar-text">PhD researcher in Teacher Education. I understand how children learn — not just from experience, but from the science of it.</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🌍</div>
+        <div>
+          <div class="pillar-title">Internationally Experienced</div>
+          <div class="pillar-text">Taught and lived across 5 countries. Understands British, American, IB, and international curricula from the inside.</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🏫</div>
+        <div>
+          <div class="pillar-title">School Leadership Perspective</div>
+          <div class="pillar-text">Former vice-principal who oversaw 100+ teachers. I know what schools look for — and how to position your child.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="credentials-list reveal">
+    <h3 class="serif">Qualifications & Background</h3>
+    <div class="credential-item">PhD Researcher in Teacher Education · Eötvös Loránd University, Budapest</div>
+    <div class="credential-item">CELTA Certified — English Language Teaching to Adults (Cambridge)</div>
+    <div class="credential-item">IH Certified — English for Young Learners & Teenagers</div>
+    <div class="credential-item">MSc Educational Leadership · Nazarbayev University</div>
+    <div class="credential-item">Vice-Principal, National School of Physics & Math, Kazakhstan</div>
+    <div class="credential-item">Senior Manager, Nazarbayev Intellectual Schools (20-school network)</div>
+    <div class="credential-item">3 peer-reviewed publications in educational technology & teacher education</div>
+    <div class="credential-item">Peer reviewer: EERA · British Journal of Educational Technology · Review of Education</div>
+    <div class="credential-item">$34,000 research grant recipient · 5-year full PhD scholarship</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header reveal">
+    <div class="section-eyebrow">Services</div>
+    <h2 class="section-title">How I Can Help Your Family</h2>
+    <p class="section-lead">Tailored support for children and parents — from building early literacy to finding the right school.</p>
+  </div>
+
+  <div class="services-tabs reveal" style="margin-top: 2rem;">
+    <button class="tab-btn active" data-tab="children">For Your Child</button>
+    <button class="tab-btn" data-tab="parents">For Parents</button>
+  </div>
+
+  <div class="tab-panel active" id="tab-children">
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">🔤</div>
+        <h3 class="service-title">English Tutoring</h3>
+        <span class="service-age">Ages 4–12</span>
+        <p class="service-desc">Building genuine confidence in English — from first words to fluent expression. Structured, playful, and adapted to your child's pace.</p>
+        <ul class="service-bullets">
+          <li>Phonics, reading & writing foundations for early learners</li>
+          <li>Vocabulary, comprehension & communication skills</li>
+          <li>Tailored to your child's current school curriculum</li>
+          <li>Online and in-person (Dubai) available</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📐</div>
+        <h3 class="service-title">Maths Support</h3>
+        <span class="service-age">Ages 5–12</span>
+        <p class="service-desc">Real understanding, not just memorised steps. Maths anxiety starts early — so does the solution.</p>
+        <ul class="service-bullets">
+          <li>Early numeracy for Reception and Year 1–2</li>
+          <li>Core curriculum support for Years 3–6</li>
+          <li>Aligned to British, American & IB curricula</li>
+          <li>Progress tracked and shared with parents</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🎒</div>
+        <h3 class="service-title">School Readiness</h3>
+        <span class="service-age">Ages 3.5–5</span>
+        <p class="service-desc">Help your child arrive prepared — academically, socially, and emotionally. Ideal ahead of FS1, FS2, or Kindergarten entry.</p>
+        <ul class="service-bullets">
+          <li>Pre-reading and pre-writing skills</li>
+          <li>Listening, following instructions, classroom behaviour</li>
+          <li>Confidence-building through age-appropriate activities</li>
+          <li>Peace of mind for parents on Day One</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-panel" id="tab-parents">
+    <div class="services-grid services-grid-2col">
+      <div class="service-card reveal">
+        <div class="service-icon">🏫</div>
+        <h3 class="service-title">Dubai School Selection</h3>
+        <span class="service-age">Independent · Unbiased</span>
+        <p class="service-desc">Over 200 private schools. Six major curricula. KHDA ratings. Waitlists. It's a lot. I cut through the noise with honest, expert guidance.</p>
+        <ul class="service-bullets">
+          <li>1:1 consultation on your child's profile & family priorities</li>
+          <li>Curriculum comparison: British, American, IB, Indian & more</li>
+          <li>Curated shortlist matched to your needs and budget</li>
+          <li>Advice on applications, assessments & timing</li>
+          <li>No school affiliations. No referral fees. Just honest advice.</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📋</div>
+        <h3 class="service-title">Academic Advisory</h3>
+        <span class="service-age">Expert Sounding Board</span>
+        <p class="service-desc">Already enrolled but have questions? Need a second opinion from someone who truly understands the system?</p>
+        <ul class="service-bullets">
+          <li>Understanding your child's school reports & assessments</li>
+          <li>Comparing curricula for international relocations</li>
+          <li>Identifying learning gaps and how to address them</li>
+          <li>Knowing when — and what kind of — support is needed</li>
+          <li>Transition year guidance (FS1, Year 1, Year 7)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="reveal">
+    <div class="section-eyebrow" style="color: var(--gold-light);">Why Choose Assel</div>
+    <h2 class="section-title" style="color: var(--white);">Not Every Tutor Has Been<br><em class="serif" style="color: var(--gold);">Inside the System</em></h2>
+    <p class="section-lead">There's a meaningful difference between someone who teaches and someone who has built, led, and researched education from the ground up.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-number">01</div>
+      <div class="why-title">Genuinely Independent</div>
+      <div class="why-text">No school affiliations, no referral commissions. Advice driven entirely by what's right for your child — nothing else.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-number">02</div>
+      <div class="why-title">Research Meets Reality</div>
+      <div class="why-text">PhD-level knowledge of how children actually learn, applied with practical classroom experience. Theory grounded in the real world.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-number">03</div>
+      <div class="why-title">International Depth</div>
+      <div class="why-text">Having lived, taught, and studied across 5 countries, Assel understands how curricula compare — critical knowledge in Dubai's diverse school market.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-number">04</div>
+      <div class="why-title">School Leader Perspective</div>
+      <div class="why-text">As a former vice-principal overseeing 100+ teachers, Assel understands what schools value and how to give your child the best chance.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-number">05</div>
+      <div class="why-title">Child-First Always</div>
+      <div class="why-text">Over 15 years of direct work with children of all ages and nationalities. Deep empathy for how children feel — not just how they perform.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-number">06</div>
+      <div class="why-title">Dubai Local Knowledge</div>
+      <div class="why-text">Based in Dubai. Stays current on KHDA inspection reports, admissions trends, fee structures, and which schools are the right fit for which families.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="reveal" style="text-align: center;">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-title">Simple. Transparent. Stress-Free.</h2>
+    <p class="section-lead" style="margin: 0 auto;">Getting started takes three steps and less than 20 minutes of your time.</p>
+  </div>
+  <div class="process-steps">
+    <div class="step reveal">
+      <div class="step-number">1</div>
+      <div class="step-title">Book a Free Call</div>
+      <p class="step-text">A relaxed 20-minute conversation about your child and what you're looking for. No commitment, no pressure.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-number">2</div>
+      <div class="step-title">Get Your Proposal</div>
+      <p class="step-text">Receive a tailored plan — whether that's a tutoring schedule, a school shortlist, or an advisory session matched to your needs.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-number">3</div>
+      <div class="step-title">Start with Confidence</div>
+      <p class="step-text">Begin with the knowledge that your child is in experienced, caring hands — and that you have an expert in your corner.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="reveal" style="text-align: center; margin-bottom: 2rem;">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-title">Common Questions</h2>
+  </div>
+  <div class="faq-grid reveal">
+    <div class="faq-item">
+      <div class="faq-question">Do you offer online or in-person sessions?</div>
+      <div class="faq-answer">Both. In-person sessions are available in Dubai. Online sessions are available for families anywhere in the world — particularly useful for school consulting for families relocating to Dubai.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What age groups do you work with?</div>
+      <div class="faq-answer">Children aged 3.5–12 for tutoring and school readiness. School consulting and academic advisory sessions are for parents of children of any school age.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How do sessions work for young children?</div>
+      <div class="faq-answer">Sessions are structured but playful, tailored to short attention spans and natural curiosity. Each child gets a personalised learning plan, and progress is shared with parents regularly — typically 45–60 minutes per session.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Which Dubai schools are you familiar with?</div>
+      <div class="faq-answer">I have broad knowledge across the full range of Dubai's private school sector — British, American, IB, Indian, and more — and stay current with KHDA inspection reports, admissions timelines, and fee structures.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you have affiliations with any schools?</div>
+      <div class="faq-answer">None. I accept no referral fees or commissions from schools. My advice is entirely independent and based solely on what's right for your child and family.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you offer packages or one-off sessions?</div>
+      <div class="faq-answer">Both are available. For tutoring, regular weekly sessions consistently produce the best results. For consulting, many families find a single structured session gives them all the clarity they need.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-wrapper">
+    <div class="contact-info reveal">
+      <div class="section-eyebrow">Contact</div>
+      <h2 class="section-title serif">Let's Talk About Your Child</h2>
+      <p>Whether you're new to Dubai, weighing a school move, or simply want your child to thrive — reach out. The first conversation is free and there's no obligation.</p>
+      <div class="contact-details">
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <span>Dubai, United Arab Emirates</span>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📧</div>
+          <span>stambekovassel@gmail.com</span>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">💼</div>
+          <span><a href="https://www.linkedin.com/in/assel-csonkastambekova-ph-d-0340b012" target="_blank" style="color: var(--gold); text-decoration: none;">LinkedIn Profile</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <h3 class="form-title">Send a Message</h3>
+      <div id="contact-form-inner">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" id="fname" placeholder="Sarah" />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="lname" placeholder="Al Rashidi" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label>I'm interested in</label>
+          <select id="service">
+            <option value="">Select a service…</option>
+            <option>English Tutoring (Child)</option>
+            <option>Maths Support (Child)</option>
+            <option>School Readiness Preparation</option>
+            <option>Dubai School Selection Consulting</option>
+            <option>Academic Advisory Session</option>
+            <option>Not sure yet — just exploring</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Child's Age (if applicable)</label>
+          <input type="text" id="age" placeholder="e.g. 6 years old" />
+        </div>
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea id="message" placeholder="Tell me a little about your child and what you're looking for…"></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()">Send Message →</button>
+      </div>
+      <div class="form-success" id="form-success">
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">✦</div>
+        Thank you — your message has been sent.<br>
+        <span style="font-size: 0.9rem; font-family: 'DM Sans', sans-serif; color: var(--muted); font-weight: 300;">Assel will be in touch within 24 hours.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Assel <span>Csonka-Stambekova</span></div>
+  <div class="footer-text">© 2025 · Education Consultant & Tutor · Dubai, UAE</div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Tabs
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // FAQ
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Form
+  function submitForm() {
+    const fname = document.getElementById('fname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if (!fname || !email || !message) {
+      alert('Please fill in your name, email, and message before sending.');
+      return;
+    }
+    document.getElementById('contact-form-inner').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+</script>
+</body>
+</html>
