@@ -106,16 +106,16 @@
 
   .hero-bg {
     position: absolute; inset: 0; z-index: 0;
-    background: linear-gradient(135deg, var(--cream) 55%, var(--navy) 55%);
+    background: var(--cream);
   }
 
   .hero-bg::before {
     content: '';
     position: absolute;
     top: 0; right: 0;
-    width: 45%;
+    width: 50%;
     height: 100%;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C49A4A' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    background: var(--navy) url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C49A4A' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
   }
 
   .hero-left {
@@ -773,8 +773,8 @@
   @media (max-width: 1024px) {
     nav { padding: 1.2rem 2rem; }
     #hero { grid-template-columns: 1fr; }
-    .hero-bg { background: linear-gradient(160deg, var(--cream) 60%, var(--navy) 60%); }
-    .hero-bg::before { width: 100%; height: 40%; top: auto; bottom: 0; }
+    .hero-bg { background: var(--cream); }
+    .hero-bg::before { width: 100%; height: 45%; top: auto; bottom: 0; }
     .hero-left { padding: 5rem 2rem 3rem; }
     .hero-right { padding: 2rem; }
     #about { grid-template-columns: 1fr; padding: 4rem 2rem; gap: 3rem; }
@@ -828,7 +828,7 @@
   <div class="hero-left">
     <span class="hero-eyebrow">Education Consultant · Dubai</span>
     <h1 class="hero-title">Give Your Child the Start<br><em>They Deserve</em></h1>
-    <p class="hero-subtitle">Expert tutoring and private school guidance for Dubai families — backed by PhD-level research and 15+ years in classrooms and school leadership.</p>
+    <p class="hero-subtitle">Expert tutoring, academic writing support, and private school guidance for families in Dubai — backed by PhD-level research and 15+ years in classrooms and school leadership.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Book a Free 20-Min Call</a>
       <a href="#services" class="btn-secondary">Explore Services</a>
@@ -873,15 +873,15 @@
   <div class="about-text reveal">
     <div class="section-eyebrow">About</div>
     <h2 class="section-title">Teacher. Researcher.<br>Your Family's Advocate.</h2>
-    <p>I'm Assel — a PhD-qualified educator, certified English teacher, and former school vice-principal. I've spent over 15 years working inside schools across Kazakhstan, Hungary, India, and the UAE. I know how education systems work from the inside — and I use that knowledge to help your child thrive.</p>
-    <p>Whether you need focused tutoring for your child or clear-headed advice on navigating Dubai's complex school landscape, I offer something rare: deep academic expertise combined with genuine, hands-on classroom experience.</p>
-    <p>I don't do one-size-fits-all. Every child is different, every family has different priorities, and my job is to understand yours.</p>
+    <p>I'm Assel, former <a href="https://astana.fizmat.kz/" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(196,154,74,0.4);">National School of Physics and Math for Gifted Children</a> vice-principal, with a PhD in Education from Eötvös Loránd University, Hungary (cum laude), CELTA and IHCYL certified English as a Second Language teacher to Adults and Young Learners, MSc in Educational Leadership from the Graduate School of Education, Nazarbayev University (world's top 176–200 in Education), Kazakhstan, and BEd from Kazakh Ablai Khan University of International Relations and World Languages with Honours, Kazakhstan.</p>
+    <p>I've spent over 15 years working inside schools across Kazakhstan, Hungary, and the UAE. I know how education systems work from the inside — and I use that knowledge to help your child thrive.</p>
+    <p>Whether you need focused tutoring for your child, academic writing support, or clear-headed advice on navigating Dubai's complex school landscape, I offer something rare: deep academic expertise combined with genuine, hands-on classroom experience.</p>
     <div class="about-pillars">
       <div class="pillar">
         <div class="pillar-icon">🔬</div>
         <div>
           <div class="pillar-title">Research-Backed Approach</div>
-          <div class="pillar-text">PhD researcher in Teacher Education. I understand how children learn — not just from experience, but from the science of it.</div>
+          <div class="pillar-text">PhD in Teacher Education, cum laude. I understand how children learn — not just from experience, but from the science of it.</div>
         </div>
       </div>
       <div class="pillar">
@@ -902,14 +902,15 @@
   </div>
   <div class="credentials-list reveal">
     <h3 class="serif">Qualifications & Background</h3>
-    <div class="credential-item">PhD Researcher in Teacher Education · Eötvös Loránd University, Budapest</div>
+    <div class="credential-item">PhD in Teacher Education, <em>cum laude</em> · Eötvös Loránd University, Budapest, Hungary</div>
+    <div class="credential-item">MSc Educational Leadership · Graduate School of Education, Nazarbayev University, Kazakhstan <span style="color:var(--gold); font-size:0.78rem;">(World Top 176–200 in Education)</span></div>
+    <div class="credential-item">BEd with Honours · Kazakh Ablai Khan University of International Relations and World Languages</div>
     <div class="credential-item">CELTA Certified — English Language Teaching to Adults (Cambridge)</div>
-    <div class="credential-item">IH Certified — English for Young Learners & Teenagers</div>
-    <div class="credential-item">MSc Educational Leadership · Nazarbayev University</div>
-    <div class="credential-item">Vice-Principal, National School of Physics & Math, Kazakhstan</div>
-    <div class="credential-item">Senior Manager, Nazarbayev Intellectual Schools (20-school network)</div>
-    <div class="credential-item">3 peer-reviewed publications in educational technology & teacher education</div>
-    <div class="credential-item">Peer reviewer: EERA · British Journal of Educational Technology · Review of Education</div>
+    <div class="credential-item">IHCYL Certified — English for Young Learners & Teenagers (International House)</div>
+    <div class="credential-item">Vice-Principal · <a href="https://astana.fizmat.kz/" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: none;">National School of Physics & Math for Gifted Children</a>, Kazakhstan</div>
+    <div class="credential-item">Senior Manager · Nazarbayev Intellectual Schools (20-school national network)</div>
+    <div class="credential-item">3 peer-reviewed publications · Educational technology &amp; teacher education</div>
+    <div class="credential-item">Peer reviewer: EERA · <span style="color:var(--gold)">British Journal of Educational Technology</span> <em style="font-size:0.78rem;">(Q1)</em> · <span style="color:var(--gold)">Review of Education</span> <em style="font-size:0.78rem;">(Q1)</em> · <span style="color:var(--gold)">European Journal of Teacher Education</span> <em style="font-size:0.78rem;">(Q1)</em></div>
     <div class="credential-item">$34,000 research grant recipient · 5-year full PhD scholarship</div>
   </div>
 </section>
@@ -918,13 +919,14 @@
 <section id="services">
   <div class="services-header reveal">
     <div class="section-eyebrow">Services</div>
-    <h2 class="section-title">How I Can Help Your Family</h2>
-    <p class="section-lead">Tailored support for children and parents — from building early literacy to finding the right school.</p>
+    <h2 class="section-title">How I Can Help</h2>
+    <p class="section-lead">Tailored support for children, parents, and adult learners — from building early literacy to navigating Dubai's school landscape.</p>
   </div>
 
   <div class="services-tabs reveal" style="margin-top: 2rem;">
-    <button class="tab-btn active" data-tab="children">For Your Child</button>
+    <button class="tab-btn active" data-tab="children">For Children</button>
     <button class="tab-btn" data-tab="parents">For Parents</button>
+    <button class="tab-btn" data-tab="adults">For Adults</button>
   </div>
 
   <div class="tab-panel active" id="tab-children">
@@ -932,12 +934,13 @@
       <div class="service-card reveal">
         <div class="service-icon">🔤</div>
         <h3 class="service-title">English Tutoring</h3>
-        <span class="service-age">Ages 4–12</span>
-        <p class="service-desc">Building genuine confidence in English — from first words to fluent expression. Structured, playful, and adapted to your child's pace.</p>
+        <span class="service-age">Ages 4–18</span>
+        <p class="service-desc">Building genuine confidence in English — from first words to fluent, independent expression. Structured, engaging, and adapted to your child's pace and school curriculum.</p>
         <ul class="service-bullets">
-          <li>Phonics, reading & writing foundations for early learners</li>
-          <li>Vocabulary, comprehension & communication skills</li>
-          <li>Tailored to your child's current school curriculum</li>
+          <li>Phonics, reading &amp; writing foundations for early learners</li>
+          <li>Vocabulary, comprehension &amp; communication for primary &amp; secondary</li>
+          <li><strong>Creative writing</strong> — core writing skills that lay a foundation for strong communication in school and beyond</li>
+          <li><strong>Academic writing</strong> — proofreading, citations, plagiarism checks, spelling &amp; grammar</li>
           <li>Online and in-person (Dubai) available</li>
         </ul>
       </div>
@@ -949,7 +952,7 @@
         <ul class="service-bullets">
           <li>Early numeracy for Reception and Year 1–2</li>
           <li>Core curriculum support for Years 3–6</li>
-          <li>Aligned to British, American & IB curricula</li>
+          <li>Aligned to British, American &amp; IB curricula</li>
           <li>Progress tracked and shared with parents</li>
         </ul>
       </div>
@@ -976,10 +979,10 @@
         <span class="service-age">Independent · Unbiased</span>
         <p class="service-desc">Over 200 private schools. Six major curricula. KHDA ratings. Waitlists. It's a lot. I cut through the noise with honest, expert guidance.</p>
         <ul class="service-bullets">
-          <li>1:1 consultation on your child's profile & family priorities</li>
-          <li>Curriculum comparison: British, American, IB, Indian & more</li>
+          <li>1:1 consultation on your child's profile &amp; family priorities</li>
+          <li>Curriculum comparison: British, American, IB, Indian &amp; more</li>
           <li>Curated shortlist matched to your needs and budget</li>
-          <li>Advice on applications, assessments & timing</li>
+          <li>Advice on applications, assessments &amp; timing</li>
           <li>No school affiliations. No referral fees. Just honest advice.</li>
         </ul>
       </div>
@@ -989,11 +992,43 @@
         <span class="service-age">Expert Sounding Board</span>
         <p class="service-desc">Already enrolled but have questions? Need a second opinion from someone who truly understands the system?</p>
         <ul class="service-bullets">
-          <li>Understanding your child's school reports & assessments</li>
+          <li>Understanding your child's school reports &amp; assessments</li>
           <li>Comparing curricula for international relocations</li>
           <li>Identifying learning gaps and how to address them</li>
           <li>Knowing when — and what kind of — support is needed</li>
           <li>Transition year guidance (FS1, Year 1, Year 7)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-panel" id="tab-adults">
+    <div class="services-grid services-grid-2col">
+      <div class="service-card reveal">
+        <div class="service-icon">💼</div>
+        <h3 class="service-title">Business English</h3>
+        <span class="service-age">Adults · All Levels</span>
+        <p class="service-desc">Professional English for the workplace — from day-to-day emails to boardroom presentations. Tailored to your industry, your role, and your specific communication gaps.</p>
+        <ul class="service-bullets">
+          <li>Written communication — emails, reports, proposals</li>
+          <li>Presentation skills and professional vocabulary</li>
+          <li>Meeting and negotiation language</li>
+          <li>Confidence in multinational and corporate environments</li>
+          <li>Flexible scheduling for working professionals</li>
+          <li>Online sessions available globally</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🎓</div>
+        <h3 class="service-title">Academic English & Writing</h3>
+        <span class="service-age">University Level</span>
+        <p class="service-desc">For students and researchers who need their written English to meet international academic standards — without losing their own voice.</p>
+        <ul class="service-bullets">
+          <li>Academic writing coaching — structure, argumentation, style</li>
+          <li>Proofreading with tracked corrections and explanations</li>
+          <li>Citation guidance (APA, Harvard, MLA)</li>
+          <li>Plagiarism awareness and paraphrase techniques</li>
+          <li>IELTS &amp; TOEFL preparation (taught by certified examiner)</li>
         </ul>
       </div>
     </div>
@@ -1115,11 +1150,11 @@
         </div>
         <div class="contact-detail">
           <div class="contact-detail-icon">📧</div>
-          <span>test@test.com</span>
+          <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7d0e091c101f1816120b1c0e0e18113d1a101c1411531e1210">[email&#160;protected]</a></span>
         </div>
         <div class="contact-detail">
           <div class="contact-detail-icon">💼</div>
-          <span><a href="https://www.linkedin.com/in/assel-csonkastambekova-ph-d-0340b012" target="_blank" style="color: var(--gold); text-decoration: none;">LinkedIn Profile</a></span>
+          <span><a href="https://www.linkedin.com/in/assel-csonkastambekova-ph-d-0340b012/" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: none;">LinkedIn Profile ↗</a></span>
         </div>
       </div>
     </div>
@@ -1182,7 +1217,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Nav scroll
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
@@ -1201,7 +1236,8 @@
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
-      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      const panel = document.getElementById('tab-' + btn.dataset.tab);
+      if (panel) panel.classList.add('active');
     });
   });
 
@@ -1233,12 +1269,4 @@
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
     if (!fname || !email || !message) {
-      alert('Please fill in your name, email, and message before sending.');
-      return;
-    }
-    document.getElementById('contact-form-inner').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-  }
-</script>
-</body>
-</html>
+      alert('Please fill in your na
