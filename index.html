@@ -1269,4 +1269,12 @@
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
     if (!fname || !email || !message) {
-      alert('Please fill in your na
+      alert('Please fill in your name, email, and message before sending.');
+      return;
+    }
+    document.getElementById('contact-form-inner').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+</script>
+</body>
+</html>
