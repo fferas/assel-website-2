@@ -5,1276 +5,590 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Assel Csonka-Stambekova | Education Consultant & Tutor, Dubai</title>
 <meta name="description" content="Expert English tutoring, school readiness, and private school consulting for families in Dubai. PhD-qualified educator with 15+ years of experience.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+
+<!-- Google Analytics — replace GA_MEASUREMENT_ID with your ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://www.assel-edu.org/#business","name":"Assel Education — Tutoring & Consulting","description":"Expert English tutoring, school readiness, maths support, and private school consulting for families in Dubai.","url":"https://www.assel-edu.org","telephone":"+971526768018","email":"assel@assel-edu.org","address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"},"priceRange":"AED 250–3500","image":"https://www.assel-edu.org/Assel_Profile.png","sameAs":["https://www.linkedin.com/in/assel-csonka-stambekova-ph-d-0340b012/"]},{"@type":"Person","@id":"https://www.assel-edu.org/#person","name":"Assel Csonka-Stambekova","jobTitle":"Education Consultant & English Tutor","url":"https://www.assel-edu.org","image":"https://www.assel-edu.org/Assel_Profile.png","telephone":"+971526768018","email":"assel@assel-edu.org","sameAs":["https://www.linkedin.com/in/assel-csonka-stambekova-ph-d-0340b012/"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"Eötvös Loránd University"},{"@type":"CollegeOrUniversity","name":"Nazarbayev University"}]}]}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --cream: #FAF7F2;
-    --cream-dark: #F0EAE0;
-    --navy: #1A2744;
-    --navy-light: #263556;
-    --gold: #C49A4A;
-    --gold-light: #D4AF6A;
-    --warm-text: #3D3530;
-    --muted: #8A7F75;
-    --white: #FFFFFF;
-    --border: rgba(196,154,74,0.25);
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--warm-text);
-    overflow-x: hidden;
-    font-size: 16px;
-    line-height: 1.7;
-  }
-
-  /* ─── TYPOGRAPHY ─── */
-  .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
-
-  h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; line-height: 1.15; }
-
-  /* ─── NAV ─── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1.2rem 4rem;
-    background: rgba(250,247,242,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    transition: box-shadow 0.3s;
-  }
-
-  nav.scrolled { box-shadow: 0 2px 30px rgba(26,39,68,0.08); }
-
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: var(--navy);
-    text-decoration: none;
-    letter-spacing: 0.02em;
-  }
-
-  .nav-logo span { color: var(--gold); }
-
-  .nav-links {
-    display: flex; gap: 2.5rem; list-style: none; align-items: center;
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    color: var(--warm-text);
-    font-size: 0.82rem;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-
-  .nav-links a:hover { color: var(--gold); }
-
-  .nav-cta {
-    background: var(--navy) !important;
-    color: var(--white) !important;
-    padding: 0.55rem 1.4rem;
-    border-radius: 2px;
-    transition: background 0.2s !important;
-  }
-
-  .nav-cta:hover { background: var(--gold) !important; color: var(--white) !important; }
-
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-  .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); transition: 0.3s; }
-
-  /* ─── HERO ─── */
-  #hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding-top: 80px;
-  }
-
-  .hero-bg {
-    position: absolute; inset: 0; z-index: 0;
-    background: var(--cream);
-  }
-
-  .hero-bg::before {
-    content: '';
-    position: absolute;
-    top: 0; right: 0;
-    width: 50%;
-    height: 100%;
-    background: var(--navy) url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C49A4A' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-  }
-
-  .hero-left {
-    position: relative; z-index: 1;
-    padding: 5rem 4rem 5rem 5rem;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.9s 0.2s forwards;
-  }
-
-  .hero-eyebrow {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--gold);
-  }
-
-  .hero-title {
-    font-size: clamp(2.8rem, 5vw, 4.2rem);
-    font-weight: 400;
-    color: var(--navy);
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-  }
-
-  .hero-title em { font-style: italic; color: var(--gold); }
-
-  .hero-subtitle {
-    font-size: 1.05rem;
-    color: var(--muted);
-    max-width: 480px;
-    margin-bottom: 2.5rem;
-    font-weight: 300;
-  }
-
-  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-
-  .btn-primary {
-    background: var(--navy);
-    color: var(--white);
-    padding: 0.85rem 2rem;
-    text-decoration: none;
-    font-size: 0.82rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: background 0.2s, transform 0.2s;
-    display: inline-block;
-    border: 2px solid var(--navy);
-  }
-
-  .btn-primary:hover { background: var(--gold); border-color: var(--gold); transform: translateY(-2px); }
-
-  .btn-secondary {
-    background: transparent;
-    color: var(--navy);
-    padding: 0.85rem 2rem;
-    text-decoration: none;
-    font-size: 0.82rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    border: 2px solid var(--navy);
-    transition: all 0.2s;
-    display: inline-block;
-  }
-
-  .btn-secondary:hover { background: var(--navy); color: var(--white); }
-
-  .hero-stats {
-    display: flex; gap: 2.5rem; margin-top: 3.5rem;
-    padding-top: 2.5rem; border-top: 1px solid var(--border);
-  }
-
-  .stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.4rem;
-    font-weight: 400;
-    color: var(--navy);
-    line-height: 1;
-  }
-
-  .stat-label { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.06em; margin-top: 0.25rem; }
-
-  .hero-right {
-    position: relative; z-index: 1;
-    display: flex; align-items: center; justify-content: center;
-    padding: 5rem 4rem;
-    opacity: 0;
-    animation: fadeIn 1s 0.5s forwards;
-  }
-
-  .hero-card {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(196,154,74,0.3);
-    border-radius: 4px;
-    padding: 2.5rem;
-    max-width: 380px;
-    backdrop-filter: blur(8px);
-  }
-
-  .hero-card-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.55rem;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--white);
-    line-height: 1.5;
-    margin-bottom: 2rem;
-  }
-
-  .hero-card-author {
-    display: flex; align-items: center; gap: 1rem;
-  }
-
-  .hero-avatar {
-    width: 52px; height: 52px;
-    border-radius: 50%;
-    background: var(--gold);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    color: var(--white);
-    font-weight: 500;
-    flex-shrink: 0;
-  }
-
-  .hero-card-name { color: var(--white); font-weight: 500; font-size: 0.9rem; }
-  .hero-card-title { color: rgba(255,255,255,0.55); font-size: 0.78rem; margin-top: 2px; }
-
-  .credentials-row {
-    display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.8rem;
-    padding-top: 1.8rem; border-top: 1px solid rgba(196,154,74,0.2);
-  }
-
-  .credential-tag {
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--gold-light);
-    border: 1px solid rgba(196,154,74,0.35);
-    padding: 0.3rem 0.7rem;
-    border-radius: 2px;
-  }
-
-  /* ─── SECTIONS COMMON ─── */
-  section { padding: 6rem 5rem; }
-
-  .section-eyebrow {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 0.8rem;
-  }
-
-  .section-title {
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    color: var(--navy);
-    margin-bottom: 1.2rem;
-  }
-
-  .section-lead {
-    font-size: 1.05rem;
-    color: var(--muted);
-    max-width: 600px;
-    font-weight: 300;
-  }
-
-  /* ─── ABOUT ─── */
-  #about {
-    background: var(--white);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-    padding: 6rem 5rem;
-  }
-
-  .about-text p { color: var(--warm-text); margin-bottom: 1.2rem; font-size: 0.97rem; }
-
-  .about-pillars {
-    display: flex; flex-direction: column; gap: 1.2rem;
-    margin-top: 2rem;
-  }
-
-  .pillar {
-    display: flex; gap: 1.2rem; align-items: flex-start;
-    padding: 1.2rem 1.5rem;
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-
-  .pillar:hover { border-color: var(--gold); box-shadow: 0 4px 20px rgba(196,154,74,0.1); }
-
-  .pillar-icon {
-    width: 40px; height: 40px; flex-shrink: 0;
-    background: var(--cream);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem;
-  }
-
-  .pillar-title { font-weight: 500; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.2rem; }
-  .pillar-text { font-size: 0.85rem; color: var(--muted); }
-
-  .credentials-list {
-    background: var(--cream);
-    border-radius: 4px;
-    padding: 2.5rem;
-    border: 1px solid var(--border);
-  }
-
-  .credentials-list h3 {
-    font-size: 1.1rem;
-    color: var(--navy);
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .credential-item {
-    display: flex; gap: 0.8rem; align-items: flex-start;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid rgba(196,154,74,0.1);
-    font-size: 0.88rem;
-    color: var(--warm-text);
-  }
-
-  .credential-item:last-child { border-bottom: none; }
-
-  .credential-item::before {
-    content: '—';
-    color: var(--gold);
-    font-weight: 500;
-    flex-shrink: 0;
-  }
-
-  /* ─── SERVICES ─── */
-  #services {
-    background: var(--cream);
-    padding: 6rem 5rem;
-  }
-
-  .services-header { text-align: center; margin-bottom: 4rem; }
-  .services-header .section-lead { margin: 0 auto; }
-
-  .services-tabs {
-    display: flex; justify-content: center; gap: 0; margin-bottom: 3rem;
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    width: fit-content;
-    margin: 0 auto 3rem;
-    overflow: hidden;
-  }
-
-  .tab-btn {
-    padding: 0.75rem 2.5rem;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    background: transparent;
-    color: var(--muted);
-    transition: all 0.2s;
-  }
-
-  .tab-btn.active { background: var(--navy); color: var(--white); }
-  .tab-btn:hover:not(.active) { background: var(--cream-dark); color: var(--navy); }
-
-  .tab-panel { display: none; }
-  .tab-panel.active { display: block; }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .services-grid-2col { grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto; }
-
-  .service-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 2rem;
-    transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px; height: 0;
-    background: var(--gold);
-    transition: height 0.3s;
-  }
-
-  .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(26,39,68,0.1); border-color: var(--gold); }
-  .service-card:hover::before { height: 100%; }
-
-  .service-icon { font-size: 1.8rem; margin-bottom: 1rem; }
-
-  .service-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: var(--navy);
-    margin-bottom: 0.6rem;
-  }
-
-  .service-age {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gold);
-    border: 1px solid var(--border);
-    padding: 0.2rem 0.6rem;
-    border-radius: 2px;
-    margin-bottom: 0.8rem;
-  }
-
-  .service-desc { font-size: 0.88rem; color: var(--muted); margin-bottom: 1.2rem; }
-
-  .service-bullets { list-style: none; }
-  .service-bullets li {
-    font-size: 0.83rem;
-    color: var(--warm-text);
-    padding: 0.3rem 0;
-    padding-left: 1.2rem;
-    position: relative;
-  }
-
-  .service-bullets li::before {
-    content: '›';
-    position: absolute; left: 0;
-    color: var(--gold);
-    font-weight: 700;
-  }
-
-  /* ─── WHY ─── */
-  #why {
-    background: var(--navy);
-    padding: 6rem 5rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  #why::before {
-    content: '';
-    position: absolute;
-    top: -100px; right: -100px;
-    width: 500px; height: 500px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(196,154,74,0.08) 0%, transparent 70%);
-  }
-
-  #why .section-title { color: var(--white); }
-  #why .section-lead { color: rgba(255,255,255,0.5); }
-
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 3.5rem;
-  }
-
-  .why-card {
-    border: 1px solid rgba(196,154,74,0.2);
-    border-radius: 4px;
-    padding: 2rem;
-    transition: border-color 0.2s, background 0.2s;
-  }
-
-  .why-card:hover { border-color: var(--gold); background: rgba(196,154,74,0.04); }
-
-  .why-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 300;
-    color: var(--gold);
-    opacity: 0.4;
-    line-height: 1;
-    margin-bottom: 0.8rem;
-  }
-
-  .why-title { font-size: 1rem; font-weight: 500; color: var(--white); margin-bottom: 0.5rem; }
-  .why-text { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
-
-  /* ─── HOW IT WORKS ─── */
-  #process {
-    background: var(--cream-dark);
-    padding: 6rem 5rem;
-  }
-
-  .process-steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3.5rem;
-    position: relative;
-  }
-
-  .process-steps::before {
-    content: '';
-    position: absolute;
-    top: 35px; left: 16.66%;
-    width: 66.66%; height: 1px;
-    background: var(--border);
-  }
-
-  .step {
-    text-align: center;
-    padding: 2rem 1.5rem;
-  }
-
-  .step-number {
-    width: 70px; height: 70px;
-    border-radius: 50%;
-    background: var(--white);
-    border: 2px solid var(--gold);
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 1.5rem;
-    position: relative; z-index: 1;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: var(--gold);
-  }
-
-  .step-title { font-size: 1.15rem; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; }
-  .step-text { font-size: 0.85rem; color: var(--muted); }
-
-  /* ─── FAQ ─── */
-  #faq {
-    background: var(--white);
-    padding: 6rem 5rem;
-  }
-
-  .faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 3rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .faq-item {
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    overflow: hidden;
-  }
-
-  .faq-question {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1.2rem 1.5rem;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 0.9rem;
-    color: var(--navy);
-    background: var(--cream);
-    gap: 1rem;
-    user-select: none;
-  }
-
-  .faq-question::after {
-    content: '+';
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: var(--gold);
-    flex-shrink: 0;
-    transition: transform 0.2s;
-  }
-
-  .faq-item.open .faq-question::after { transform: rotate(45deg); }
-
-  .faq-answer {
-    max-height: 0; overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.3s;
-    font-size: 0.86rem;
-    color: var(--muted);
-    padding: 0 1.5rem;
-  }
-
-  .faq-item.open .faq-answer { max-height: 200px; padding: 1rem 1.5rem 1.2rem; }
-
-  /* ─── CONTACT ─── */
-  #contact {
-    background: var(--cream);
-    padding: 6rem 5rem;
-  }
-
-  .contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 5rem;
-    align-items: start;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .contact-info h2 { font-size: 2.5rem; color: var(--navy); margin-bottom: 1rem; }
-  .contact-info p { font-size: 0.95rem; color: var(--muted); margin-bottom: 2rem; font-weight: 300; }
-
-  .contact-details { display: flex; flex-direction: column; gap: 1rem; }
-
-  .contact-detail {
-    display: flex; gap: 0.8rem; align-items: center;
-    font-size: 0.88rem; color: var(--warm-text);
-  }
-
-  .contact-detail-icon {
-    width: 36px; height: 36px;
-    background: var(--navy);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.85rem;
-    flex-shrink: 0;
-  }
-
-  .contact-form {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 2.5rem;
-  }
-
-  .form-title { font-size: 1.4rem; color: var(--navy); margin-bottom: 1.8rem; font-family: 'Cormorant Garamond', serif; }
-
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
-  .form-group { margin-bottom: 1.2rem; }
-
-  .form-group label {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 0.4rem;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem;
-    color: var(--warm-text);
-    background: var(--cream);
-    transition: border-color 0.2s;
-    outline: none;
-    appearance: none;
-  }
-
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus { border-color: var(--gold); background: var(--white); }
-
-  .form-group textarea { resize: vertical; min-height: 110px; }
-
-  .form-submit {
-    width: 100%;
-    background: var(--navy);
-    color: var(--white);
-    border: none;
-    padding: 0.9rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.82rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-    margin-top: 0.5rem;
-  }
-
-  .form-submit:hover { background: var(--gold); transform: translateY(-1px); }
-
-  .form-success {
-    display: none;
-    text-align: center;
-    padding: 2rem;
-    color: var(--gold);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-  }
-
-  /* ─── FOOTER ─── */
-  footer {
-    background: var(--navy);
-    padding: 2.5rem 5rem;
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 1rem;
-  }
-
-  .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    color: var(--white);
-    font-weight: 400;
-  }
-
-  .footer-logo span { color: var(--gold); }
-
-  .footer-text { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
-
-  .footer-links { display: flex; gap: 1.5rem; }
-  .footer-links a { font-size: 0.75rem; color: rgba(255,255,255,0.4); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--gold); }
-
-  /* ─── SCROLL ANIMATIONS ─── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-
-  .reveal.visible { opacity: 1; transform: none; }
-
-  /* ─── RESPONSIVE ─── */
-  @media (max-width: 1024px) {
-    nav { padding: 1.2rem 2rem; }
-    #hero { grid-template-columns: 1fr; }
-    .hero-bg { background: var(--cream); }
-    .hero-bg::before { width: 100%; height: 45%; top: auto; bottom: 0; }
-    .hero-left { padding: 5rem 2rem 3rem; }
-    .hero-right { padding: 2rem; }
-    #about { grid-template-columns: 1fr; padding: 4rem 2rem; gap: 3rem; }
-    section { padding: 4rem 2rem; }
-    #services { padding: 4rem 2rem; }
-    .services-grid { grid-template-columns: 1fr 1fr; }
-    .why-grid { grid-template-columns: 1fr 1fr; }
-    .process-steps { grid-template-columns: 1fr; }
-    .process-steps::before { display: none; }
-    .faq-grid { grid-template-columns: 1fr; }
-    .contact-wrapper { grid-template-columns: 1fr; gap: 3rem; }
-    footer { padding: 2rem; flex-direction: column; text-align: center; }
-    #why { padding: 4rem 2rem; }
-    #process { padding: 4rem 2rem; }
-    #faq { padding: 4rem 2rem; }
-    #contact { padding: 4rem 2rem; }
-  }
-
-  @media (max-width: 768px) {
-    .nav-links { display: none; flex-direction: column; position: fixed; top: 70px; left: 0; right: 0; background: var(--cream); padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); gap: 1rem; z-index: 99; }
-    .nav-links.open { display: flex; }
-    .hamburger { display: flex; }
-    .services-grid { grid-template-columns: 1fr; }
-    .services-grid-2col { grid-template-columns: 1fr; }
-    .why-grid { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
-  }
+:root{--cream:#FAF7F2;--cream-dark:#F0EAE0;--navy:#1A2744;--gold:#C49A4A;--gold-light:#D4AF6A;--warm-text:#3D3530;--muted:#8A7F75;--white:#FFFFFF;--border:rgba(196,154,74,0.25);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--warm-text);overflow-x:hidden;font-size:16px;line-height:1.7;}
+.serif{font-family:'Cormorant Garamond',Georgia,serif;}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.15;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 4rem;background:rgba(250,247,242,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s;}
+nav.scrolled{box-shadow:0 2px 30px rgba(26,39,68,0.08);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--navy);text-decoration:none;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:2.2rem;list-style:none;align-items:center;}
+.nav-links a{text-decoration:none;color:var(--warm-text);font-size:0.82rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:0.55rem 1.4rem;border-radius:2px;}
+.nav-cta:hover{background:var(--gold)!important;}
+.nav-right{display:flex;align-items:center;gap:1.2rem;}
+.lang-toggle{display:flex;border:1px solid var(--border);border-radius:2px;overflow:hidden;}
+.lang-btn{padding:0.35rem 0.75rem;font-size:0.72rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;border:none;background:transparent;color:var(--muted);cursor:pointer;transition:all 0.2s;}
+.lang-btn.active{background:var(--navy);color:var(--white);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--navy);}
+
+/* HERO */
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;position:relative;overflow:hidden;padding-top:80px;}
+.hero-bg{position:absolute;inset:0;z-index:0;background:var(--cream);}
+.hero-bg::before{content:'';position:absolute;top:0;right:0;width:50%;height:100%;background:var(--navy) url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C49A4A' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E") repeat;}
+.hero-left{position:relative;z-index:1;padding:5rem 4rem 5rem 5rem;opacity:0;transform:translateY(30px);animation:fadeUp 0.9s 0.2s forwards;}
+.hero-eyebrow{display:inline-block;font-size:0.75rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:1px solid var(--gold);}
+.hero-title{font-size:clamp(2.8rem,5vw,4.2rem);font-weight:400;color:var(--navy);margin-bottom:1.5rem;line-height:1.1;}
+.hero-title em{font-style:italic;color:var(--gold);}
+.hero-subtitle{font-size:1.05rem;color:var(--muted);max-width:480px;margin-bottom:2.5rem;font-weight:300;}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-primary{background:var(--navy);color:var(--white);padding:0.85rem 2rem;text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;border-radius:2px;border:2px solid var(--navy);transition:all 0.2s;display:inline-block;}
+.btn-primary:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-2px);}
+.btn-secondary{background:transparent;color:var(--navy);padding:0.85rem 2rem;text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;border-radius:2px;border:2px solid var(--navy);transition:all 0.2s;display:inline-block;}
+.btn-secondary:hover{background:var(--navy);color:var(--white);}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--border);}
+.stat-number{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:400;color:var(--navy);line-height:1;}
+.stat-label{font-size:0.75rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.25rem;}
+.hero-right{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:5rem 4rem;opacity:0;animation:fadeIn 1s 0.5s forwards;}
+.hero-card{background:rgba(255,255,255,0.08);border:1px solid rgba(196,154,74,0.3);border-radius:4px;padding:2.5rem;max-width:380px;backdrop-filter:blur(8px);}
+.hero-card-quote{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;font-style:italic;color:var(--white);line-height:1.5;margin-bottom:2rem;}
+.hero-card-author{display:flex;align-items:center;gap:1rem;}
+.hero-avatar{width:52px;height:52px;border-radius:50%;overflow:hidden;border:2px solid var(--gold);flex-shrink:0;}
+.hero-avatar img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+.hero-card-name{color:var(--white);font-weight:500;font-size:0.9rem;}
+.hero-card-title{color:rgba(255,255,255,0.55);font-size:0.78rem;margin-top:2px;}
+.credentials-row{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.8rem;padding-top:1.8rem;border-top:1px solid rgba(196,154,74,0.2);}
+.credential-tag{font-size:0.7rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(196,154,74,0.35);padding:0.3rem 0.7rem;border-radius:2px;}
+.lang-toggle-mobile{display:none;border:1px solid var(--border);border-radius:2px;overflow:hidden;margin-top:1.5rem;width:fit-content;}
+
+/* SECTION COMMONS */
+section{padding:6rem 5rem;}
+.section-eyebrow{font-size:0.72rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--navy);margin-bottom:1.2rem;}
+.section-lead{font-size:1.05rem;color:var(--muted);max-width:600px;font-weight:300;}
+
+/* ABOUT */
+#about{background:var(--white);display:grid;grid-template-columns:1fr 300px 1fr;gap:3.5rem;align-items:start;padding:6rem 5rem;}
+.about-text p{color:var(--warm-text);margin-bottom:1.2rem;font-size:0.97rem;}
+.about-pillars{display:flex;flex-direction:column;gap:1.2rem;margin-top:2rem;}
+.pillar{display:flex;gap:1.2rem;align-items:flex-start;padding:1.2rem 1.5rem;border:1px solid var(--border);border-radius:3px;transition:border-color 0.2s,box-shadow 0.2s;}
+.pillar:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(196,154,74,0.1);}
+.pillar-icon{width:40px;height:40px;flex-shrink:0;background:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+.pillar-title{font-weight:500;font-size:0.9rem;color:var(--navy);margin-bottom:0.2rem;}
+.pillar-text{font-size:0.85rem;color:var(--muted);}
+.about-photo-wrap{position:relative;padding-bottom:1.2rem;}
+.about-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;border-radius:4px;display:block;border:1px solid var(--border);box-shadow:8px 8px 0 var(--cream-dark);}
+.about-photo-badge{position:absolute;bottom:4px;right:-8px;background:var(--navy);color:var(--white);padding:0.5rem 1rem;font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;border-radius:2px;white-space:nowrap;}
+.about-photo-badge span{color:var(--gold);}
+.credentials-list{background:var(--cream);border-radius:4px;padding:2.5rem;border:1px solid var(--border);}
+.credentials-list h3{font-size:1.1rem;color:var(--navy);margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border);}
+.credential-item{display:flex;gap:0.8rem;align-items:flex-start;padding:0.8rem 0;border-bottom:1px solid rgba(196,154,74,0.1);font-size:0.85rem;color:var(--warm-text);}
+.credential-item:last-child{border-bottom:none;}
+.credential-item::before{content:'—';color:var(--gold);font-weight:500;flex-shrink:0;}
+
+/* SERVICES */
+#services{background:var(--cream);padding:6rem 5rem;}
+.services-header{text-align:center;margin-bottom:2rem;}
+.services-header .section-lead{margin:0 auto;}
+.services-tabs{display:flex;justify-content:center;border:1px solid var(--border);border-radius:3px;width:fit-content;margin:0 auto 3rem;overflow:hidden;}
+.tab-btn{padding:0.75rem 2.2rem;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;border:none;cursor:pointer;background:transparent;color:var(--muted);transition:all 0.2s;}
+.tab-btn.active{background:var(--navy);color:var(--white);}
+.tab-btn:hover:not(.active){background:var(--cream-dark);color:var(--navy);}
+.tab-panel{display:none;}
+.tab-panel.active{display:block;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.services-grid-2col{grid-template-columns:repeat(2,1fr);max-width:900px;margin:0 auto;}
+.service-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:2rem;transition:box-shadow 0.3s,transform 0.3s,border-color 0.3s;position:relative;overflow:hidden;}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height 0.3s;}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,39,68,0.1);border-color:var(--gold);}
+.service-card:hover::before{height:100%;}
+.service-icon{font-size:1.8rem;margin-bottom:1rem;}
+.service-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--navy);margin-bottom:0.6rem;}
+.service-age{display:inline-block;font-size:0.7rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border);padding:0.2rem 0.6rem;border-radius:2px;margin-bottom:0.8rem;}
+.service-desc{font-size:0.88rem;color:var(--muted);margin-bottom:1.2rem;}
+.service-bullets{list-style:none;}
+.service-bullets li{font-size:0.83rem;color:var(--warm-text);padding:0.3rem 0 0.3rem 1.2rem;position:relative;}
+.service-bullets li::before{content:'›';position:absolute;left:0;color:var(--gold);font-weight:700;}
+
+/* WHY */
+#why{background:var(--navy);padding:6rem 5rem;position:relative;overflow:hidden;}
+#why::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(196,154,74,0.08) 0%,transparent 70%);}
+#why .section-title{color:var(--white);}
+#why .section-lead{color:rgba(255,255,255,0.5);}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;}
+.why-card{border:1px solid rgba(196,154,74,0.2);border-radius:4px;padding:2rem;transition:border-color 0.2s,background 0.2s;}
+.why-card:hover{border-color:var(--gold);background:rgba(196,154,74,0.04);}
+.why-number{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--gold);opacity:0.4;line-height:1;margin-bottom:0.8rem;}
+.why-title{font-size:1rem;font-weight:500;color:var(--white);margin-bottom:0.5rem;}
+.why-text{font-size:0.85rem;color:rgba(255,255,255,0.5);}
+
+/* PROCESS */
+#process{background:var(--cream-dark);padding:6rem 5rem;}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3.5rem;position:relative;}
+.process-steps::before{content:'';position:absolute;top:35px;left:16.66%;width:66.66%;height:1px;background:var(--border);}
+.step{text-align:center;padding:2rem 1.5rem;}
+.step-number{width:70px;height:70px;border-radius:50%;background:var(--white);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold);}
+.step-title{font-size:1.15rem;font-weight:500;color:var(--navy);margin-bottom:0.5rem;}
+.step-text{font-size:0.85rem;color:var(--muted);}
+
+/* FAQ */
+#faq{background:var(--white);padding:6rem 5rem;}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem;max-width:900px;margin-left:auto;margin-right:auto;}
+.faq-item{border:1px solid var(--border);border-radius:3px;overflow:hidden;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;cursor:pointer;font-weight:500;font-size:0.9rem;color:var(--navy);background:var(--cream);gap:1rem;user-select:none;}
+.faq-question::after{content:'+';font-size:1.2rem;font-weight:300;color:var(--gold);flex-shrink:0;transition:transform 0.2s;}
+.faq-item.open .faq-question::after{transform:rotate(45deg);}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s;font-size:0.86rem;color:var(--muted);padding:0 1.5rem;}
+.faq-item.open .faq-answer{max-height:200px;padding:1rem 1.5rem 1.2rem;}
+
+/* CONTACT */
+#contact{background:var(--cream);padding:6rem 5rem;}
+.contact-wrapper{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start;max-width:1000px;margin:0 auto;}
+.contact-info p{font-size:0.95rem;color:var(--muted);margin-bottom:2rem;font-weight:300;}
+.contact-details{display:flex;flex-direction:column;gap:1rem;}
+.contact-detail{display:flex;gap:0.8rem;align-items:center;font-size:0.88rem;color:var(--warm-text);}
+.contact-detail-icon{width:36px;height:36px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;flex-shrink:0;}
+.contact-form{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:2.5rem;}
+.form-title{font-size:1.4rem;color:var(--navy);margin-bottom:1.8rem;font-family:'Cormorant Garamond',serif;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.form-group{margin-bottom:1.2rem;}
+.form-group label{display:block;font-size:0.75rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:2px;font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--warm-text);background:var(--cream);transition:border-color 0.2s;outline:none;appearance:none;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);background:var(--white);}
+.form-group textarea{resize:vertical;min-height:110px;}
+.form-submit{width:100%;background:var(--navy);color:var(--white);border:none;padding:0.9rem;font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background 0.2s,transform 0.2s;margin-top:0.5rem;}
+.form-submit:hover{background:var(--gold);transform:translateY(-1px);}
+.form-success{display:none;text-align:center;padding:2rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.3rem;line-height:1.6;}
+
+/* FOOTER */
+footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--white);}
+.footer-logo span{color:var(--gold);}
+.footer-text{font-size:0.78rem;color:rgba(255,255,255,0.3);}
+.footer-links{display:flex;gap:1.5rem;}
+.footer-links a{font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+.footer-links a:hover{color:var(--gold);}
+
+/* WHATSAPP */
+.whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:200;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;animation:waBounce 2s 3s ease-in-out 3;}
+.whatsapp-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5);}
+.whatsapp-float svg{width:28px;height:28px;fill:white;}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes waBounce{0%,100%{transform:scale(1);}50%{transform:scale(1.15);}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  nav{padding:1.2rem 2rem;}
+  #hero{grid-template-columns:1fr;}
+  .hero-bg::before{width:100%;height:45%;top:auto;bottom:0;}
+  .hero-left{padding:5rem 2rem 3rem;}
+  .hero-right{padding:2rem;}
+  #about{grid-template-columns:1fr;padding:4rem 2rem;gap:2.5rem;}
+  section{padding:4rem 2rem;}
+  #services,#why,#process,#faq,#contact{padding:4rem 2rem;}
+  .services-grid{grid-template-columns:1fr 1fr;}
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .process-steps{grid-template-columns:1fr;}
+  .process-steps::before{display:none;}
+  .faq-grid{grid-template-columns:1fr;}
+  .contact-wrapper{grid-template-columns:1fr;gap:3rem;}
+  footer{padding:2rem;flex-direction:column;text-align:center;}
+  .about-photo{max-width:240px;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:var(--cream);padding:1.5rem 2rem;border-bottom:1px solid var(--border);gap:1rem;z-index:99;}
+  .nav-links.open{display:flex;}
+  .hamburger{display:flex;}
+  .lang-toggle{display:none;}
+  .lang-toggle-mobile{display:flex;}
+  .services-grid,.services-grid-2col,.why-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .hero-stats{flex-wrap:wrap;gap:1.5rem;}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="navbar">
   <a href="#hero" class="nav-logo">Assel <span>.</span></a>
   <ul class="nav-links" id="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#why">Why Assel</a></li>
+    <li><a href="#about" data-i18n="nav_about">About</a></li>
+    <li><a href="#services" data-i18n="nav_services">Services</a></li>
+    <li><a href="#why" data-i18n="nav_why">Why Assel</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="#contact" class="nav-cta">Book a Call</a></li>
+    <li><a href="#contact" class="nav-cta" data-i18n="nav_cta">Book a Call</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ru')">RU</button>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-left">
-    <span class="hero-eyebrow">Education Consultant · Dubai</span>
-    <h1 class="hero-title">Give Your Child the Start<br><em>They Deserve</em></h1>
-    <p class="hero-subtitle">Expert tutoring, academic writing support, and private school guidance for families in Dubai — backed by PhD-level research and 15+ years in classrooms and school leadership.</p>
+    <span class="hero-eyebrow" data-i18n="hero_eyebrow">Education Consultant · Dubai</span>
+    <h1 class="hero-title" data-i18n="hero_title">Give Your Child the Start<br><em>They Deserve</em></h1>
+    <p class="hero-subtitle" data-i18n="hero_subtitle">Expert tutoring and private school guidance for Dubai families — backed by PhD-level research and 15+ years in classrooms and school leadership.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Book a Free 20-Min Call</a>
-      <a href="#services" class="btn-secondary">Explore Services</a>
+      <a href="#contact" class="btn-primary" data-i18n="hero_cta1">Book a Free 20-Min Call</a>
+      <a href="#services" class="btn-secondary" data-i18n="hero_cta2">Explore Services</a>
     </div>
     <div class="hero-stats">
-      <div>
-        <div class="stat-number serif">15+</div>
-        <div class="stat-label">Years of Experience</div>
-      </div>
-      <div>
-        <div class="stat-number serif">5</div>
-        <div class="stat-label">Countries Lived & Taught</div>
-      </div>
-      <div>
-        <div class="stat-number serif">PhD</div>
-        <div class="stat-label">Teacher Education</div>
-      </div>
+      <div><div class="stat-number serif">15+</div><div class="stat-label" data-i18n="stat1">Years of Experience</div></div>
+      <div><div class="stat-number serif">5</div><div class="stat-label" data-i18n="stat2">Countries Lived &amp; Taught</div></div>
+      <div><div class="stat-number serif">PhD</div><div class="stat-label" data-i18n="stat3">Teacher Education</div></div>
+    </div>
+    <div class="lang-toggle-mobile">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ru')">RU</button>
     </div>
   </div>
   <div class="hero-right">
     <div class="hero-card">
-      <p class="hero-card-quote">"The right foundation at the right age changes everything."</p>
+      <p class="hero-card-quote" data-i18n="hero_quote">"The right foundation at the right age changes everything."</p>
       <div class="hero-card-author">
-        <div class="hero-avatar">A</div>
+        <div class="hero-avatar"><img src="Assel_Profile.png" alt="Assel Csonka-Stambekova"></div>
         <div>
           <div class="hero-card-name">Assel Csonka-Stambekova</div>
-          <div class="hero-card-title">Ph.D. · CELTA · IH Certified</div>
+          <div class="hero-card-title">Ph.D. · CELTA · IHCYL</div>
         </div>
       </div>
       <div class="credentials-row">
         <span class="credential-tag">CELTA</span>
         <span class="credential-tag">IH Young Learners</span>
-        <span class="credential-tag">MSc Leadership</span>
+        <span class="credential-tag">PhD cum laude</span>
         <span class="credential-tag">Dubai Based</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="about-text reveal">
-    <div class="section-eyebrow">About</div>
-    <h2 class="section-title">Teacher. Researcher.<br>Your Family's Advocate.</h2>
-    <p>I'm Assel, former <a href="https://astana.fizmat.kz/" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(196,154,74,0.4);">National School of Physics and Math for Gifted Children</a> vice-principal, with a PhD in Education from Eötvös Loránd University, Hungary (cum laude), CELTA and IHCYL certified English as a Second Language teacher to Adults and Young Learners, MSc in Educational Leadership from the Graduate School of Education, Nazarbayev University (world's top 176–200 in Education), Kazakhstan, and BEd from Kazakh Ablai Khan University of International Relations and World Languages with Honours, Kazakhstan.</p>
-    <p>I've spent over 15 years working inside schools across Kazakhstan, Hungary, and the UAE. I know how education systems work from the inside — and I use that knowledge to help your child thrive.</p>
-    <p>Whether you need focused tutoring for your child, academic writing support, or clear-headed advice on navigating Dubai's complex school landscape, I offer something rare: deep academic expertise combined with genuine, hands-on classroom experience.</p>
+    <div class="section-eyebrow" data-i18n="about_eyebrow">About</div>
+    <h2 class="section-title" data-i18n="about_title">Teacher. Researcher.<br>Your Family's Advocate.</h2>
+    <p data-i18n="about_p1">I'm Assel, former <a href="https://astana.fizmat.kz/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(196,154,74,0.4);">National School of Physics and Math for Gifted Children</a> vice-principal, with a PhD in Education from Eötvös Loránd University, Hungary (cum laude), CELTA and IHCYL certified English teacher to Adults and Young Learners, MSc in Educational Leadership from Nazarbayev University (world's top 176–200 in Education), and BEd with Honours from Kazakh Ablai Khan University of International Relations and World Languages.</p>
+    <p data-i18n="about_p2">I've spent over 15 years working inside schools across Kazakhstan, Hungary, and the UAE. I know how education systems work from the inside — and I use that knowledge to help your child thrive.</p>
+    <p data-i18n="about_p3">Whether you need focused tutoring, academic writing support, or clear-headed advice on navigating Dubai's complex school landscape, I offer something rare: deep academic expertise combined with genuine, hands-on classroom experience.</p>
     <div class="about-pillars">
-      <div class="pillar">
-        <div class="pillar-icon">🔬</div>
-        <div>
-          <div class="pillar-title">Research-Backed Approach</div>
-          <div class="pillar-text">PhD in Teacher Education, cum laude. I understand how children learn — not just from experience, but from the science of it.</div>
-        </div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🌍</div>
-        <div>
-          <div class="pillar-title">Internationally Experienced</div>
-          <div class="pillar-text">Taught and lived across 5 countries. Understands British, American, IB, and international curricula from the inside.</div>
-        </div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🏫</div>
-        <div>
-          <div class="pillar-title">School Leadership Perspective</div>
-          <div class="pillar-text">Former vice-principal who oversaw 100+ teachers. I know what schools look for — and how to position your child.</div>
-        </div>
-      </div>
+      <div class="pillar"><div class="pillar-icon">🔬</div><div><div class="pillar-title" data-i18n="pillar1_title">Research-Backed Approach</div><div class="pillar-text" data-i18n="pillar1_text">PhD in Teacher Education, cum laude. I understand how children learn — not just from experience, but from the science of it.</div></div></div>
+      <div class="pillar"><div class="pillar-icon">🌍</div><div><div class="pillar-title" data-i18n="pillar2_title">Internationally Experienced</div><div class="pillar-text" data-i18n="pillar2_text">Taught and lived across 5 countries. Deep understanding of British, American, IB, and international curricula.</div></div></div>
+      <div class="pillar"><div class="pillar-icon">🏫</div><div><div class="pillar-title" data-i18n="pillar3_title">School Leadership Perspective</div><div class="pillar-text" data-i18n="pillar3_text">Former vice-principal overseeing 100+ teachers. I know what schools look for — and how to position your child.</div></div></div>
     </div>
   </div>
+  <div class="about-photo-wrap reveal">
+    <img src="Assel_Profile.png" alt="Assel Csonka-Stambekova PhD, Education Consultant Dubai" class="about-photo">
+    <div class="about-photo-badge">Dubai, UAE · <span data-i18n="badge_available">Available Now</span></div>
+  </div>
   <div class="credentials-list reveal">
-    <h3 class="serif">Qualifications & Background</h3>
-    <div class="credential-item">PhD in Teacher Education, <em>cum laude</em> · Eötvös Loránd University, Budapest, Hungary</div>
-    <div class="credential-item">MSc Educational Leadership · Graduate School of Education, Nazarbayev University, Kazakhstan <span style="color:var(--gold); font-size:0.78rem;">(World Top 176–200 in Education)</span></div>
-    <div class="credential-item">BEd with Honours · Kazakh Ablai Khan University of International Relations and World Languages</div>
-    <div class="credential-item">CELTA Certified — English Language Teaching to Adults (Cambridge)</div>
-    <div class="credential-item">IHCYL Certified — English for Young Learners & Teenagers (International House)</div>
-    <div class="credential-item">Vice-Principal · <a href="https://astana.fizmat.kz/" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: none;">National School of Physics & Math for Gifted Children</a>, Kazakhstan</div>
-    <div class="credential-item">Senior Manager · Nazarbayev Intellectual Schools (20-school national network)</div>
-    <div class="credential-item">3 peer-reviewed publications · Educational technology &amp; teacher education</div>
-    <div class="credential-item">Peer reviewer: EERA · <span style="color:var(--gold)">British Journal of Educational Technology</span> <em style="font-size:0.78rem;">(Q1)</em> · <span style="color:var(--gold)">Review of Education</span> <em style="font-size:0.78rem;">(Q1)</em> · <span style="color:var(--gold)">European Journal of Teacher Education</span> <em style="font-size:0.78rem;">(Q1)</em></div>
-    <div class="credential-item">$34,000 research grant recipient · 5-year full PhD scholarship</div>
+    <h3 class="serif" data-i18n="cred_title">Qualifications &amp; Background</h3>
+    <div class="credential-item" data-i18n="cred1">PhD in Teacher Education, <em>cum laude</em> · Eötvös Loránd University, Budapest</div>
+    <div class="credential-item" data-i18n="cred2">MSc Educational Leadership · Nazarbayev University <span style="color:var(--gold);font-size:0.78rem;">(World Top 176–200)</span></div>
+    <div class="credential-item" data-i18n="cred3">BEd with Honours · Kazakh Ablai Khan University</div>
+    <div class="credential-item" data-i18n="cred4">CELTA Certified — English Teaching to Adults (Cambridge)</div>
+    <div class="credential-item" data-i18n="cred5">IHCYL Certified — English for Young Learners (International House)</div>
+    <div class="credential-item" data-i18n="cred6">Vice-Principal · <a href="https://astana.fizmat.kz/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">National School of Physics &amp; Math</a>, Kazakhstan</div>
+    <div class="credential-item" data-i18n="cred7">3 peer-reviewed publications · Educational technology &amp; teacher education</div>
+    <div class="credential-item" data-i18n="cred8">Peer reviewer: EERA · <em>British Journal of Educational Technology</em> (Q1) · <em>Review of Education</em> (Q1) · <em>European Journal of Teacher Education</em> (Q1)</div>
+    <div class="credential-item" data-i18n="cred9">$34,000 research grant · 5-year full PhD scholarship</div>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
   <div class="services-header reveal">
-    <div class="section-eyebrow">Services</div>
-    <h2 class="section-title">How I Can Help</h2>
-    <p class="section-lead">Tailored support for children, parents, and adult learners — from building early literacy to navigating Dubai's school landscape.</p>
+    <div class="section-eyebrow" data-i18n="svc_eyebrow">Services</div>
+    <h2 class="section-title" data-i18n="svc_title">How I Can Help</h2>
+    <p class="section-lead" data-i18n="svc_lead">Tailored support for children, parents, and adult learners — from early literacy to navigating Dubai's school landscape.</p>
   </div>
-
-  <div class="services-tabs reveal" style="margin-top: 2rem;">
-    <button class="tab-btn active" data-tab="children">For Children</button>
-    <button class="tab-btn" data-tab="parents">For Parents</button>
-    <button class="tab-btn" data-tab="adults">For Adults</button>
+  <div class="services-tabs reveal" style="margin-top:2rem;">
+    <button class="tab-btn active" data-tab="children" data-i18n="tab_children">For Children</button>
+    <button class="tab-btn" data-tab="parents" data-i18n="tab_parents">For Parents</button>
+    <button class="tab-btn" data-tab="adults" data-i18n="tab_adults">For Adults</button>
   </div>
-
   <div class="tab-panel active" id="tab-children">
     <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-icon">🔤</div>
-        <h3 class="service-title">English Tutoring</h3>
-        <span class="service-age">Ages 4–18</span>
-        <p class="service-desc">Building genuine confidence in English — from first words to fluent, independent expression. Structured, engaging, and adapted to your child's pace and school curriculum.</p>
+        <h3 class="service-title" data-i18n="s1_title">English Tutoring</h3>
+        <span class="service-age" data-i18n="s1_age">Ages 4–18</span>
+        <p class="service-desc" data-i18n="s1_desc">Building genuine confidence in English — from first words to fluent, independent expression. Structured, engaging, and adapted to your child's pace.</p>
         <ul class="service-bullets">
-          <li>Phonics, reading &amp; writing foundations for early learners</li>
-          <li>Vocabulary, comprehension &amp; communication for primary &amp; secondary</li>
-          <li><strong>Creative writing</strong> — core writing skills that lay a foundation for strong communication in school and beyond</li>
-          <li><strong>Academic writing</strong> — proofreading, citations, plagiarism checks, spelling &amp; grammar</li>
-          <li>Online and in-person (Dubai) available</li>
+          <li data-i18n="s1_b1">Phonics, reading &amp; writing foundations for early learners</li>
+          <li data-i18n="s1_b2">Vocabulary, comprehension &amp; communication for primary &amp; secondary</li>
+          <li data-i18n="s1_b3"><strong>Creative writing</strong> — building core skills for strong communication</li>
+          <li data-i18n="s1_b4"><strong>Academic writing</strong> — proofreading, citations, plagiarism checks, grammar</li>
+          <li data-i18n="s1_b5">Online and in-person (Dubai) available</li>
         </ul>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">📐</div>
-        <h3 class="service-title">Maths Support</h3>
-        <span class="service-age">Ages 5–12</span>
-        <p class="service-desc">Real understanding, not just memorised steps. Maths anxiety starts early — so does the solution.</p>
+        <h3 class="service-title" data-i18n="s2_title">Maths Support</h3>
+        <span class="service-age" data-i18n="s2_age">Ages 5–12</span>
+        <p class="service-desc" data-i18n="s2_desc">Real understanding, not just memorised steps. Maths anxiety starts early — so does the solution.</p>
         <ul class="service-bullets">
-          <li>Early numeracy for Reception and Year 1–2</li>
-          <li>Core curriculum support for Years 3–6</li>
-          <li>Aligned to British, American &amp; IB curricula</li>
-          <li>Progress tracked and shared with parents</li>
+          <li data-i18n="s2_b1">Early numeracy for Reception and Year 1–2</li>
+          <li data-i18n="s2_b2">Core curriculum support for Years 3–6</li>
+          <li data-i18n="s2_b3">Aligned to British, American &amp; IB curricula</li>
+          <li data-i18n="s2_b4">Progress tracked and shared with parents</li>
         </ul>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">🎒</div>
-        <h3 class="service-title">School Readiness</h3>
-        <span class="service-age">Ages 3.5–5</span>
-        <p class="service-desc">Help your child arrive prepared — academically, socially, and emotionally. Ideal ahead of FS1, FS2, or Kindergarten entry.</p>
+        <h3 class="service-title" data-i18n="s3_title">School Readiness</h3>
+        <span class="service-age" data-i18n="s3_age">Ages 3.5–5</span>
+        <p class="service-desc" data-i18n="s3_desc">Help your child arrive prepared — academically, socially, and emotionally. Ideal ahead of FS1, FS2, or Kindergarten entry.</p>
         <ul class="service-bullets">
-          <li>Pre-reading and pre-writing skills</li>
-          <li>Listening, following instructions, classroom behaviour</li>
-          <li>Confidence-building through age-appropriate activities</li>
-          <li>Peace of mind for parents on Day One</li>
+          <li data-i18n="s3_b1">Pre-reading and pre-writing skills</li>
+          <li data-i18n="s3_b2">Listening, following instructions, classroom behaviour</li>
+          <li data-i18n="s3_b3">Confidence-building through age-appropriate activities</li>
+          <li data-i18n="s3_b4">Peace of mind for parents on Day One</li>
         </ul>
       </div>
     </div>
   </div>
-
   <div class="tab-panel" id="tab-parents">
     <div class="services-grid services-grid-2col">
       <div class="service-card reveal">
         <div class="service-icon">🏫</div>
-        <h3 class="service-title">Dubai School Selection</h3>
-        <span class="service-age">Independent · Unbiased</span>
-        <p class="service-desc">Over 200 private schools. Six major curricula. KHDA ratings. Waitlists. It's a lot. I cut through the noise with honest, expert guidance.</p>
+        <h3 class="service-title" data-i18n="s4_title">Dubai School Selection</h3>
+        <span class="service-age" data-i18n="s4_age">Independent · Unbiased</span>
+        <p class="service-desc" data-i18n="s4_desc">Over 200 private schools. Six major curricula. KHDA ratings. I cut through the noise with honest, expert guidance.</p>
         <ul class="service-bullets">
-          <li>1:1 consultation on your child's profile &amp; family priorities</li>
-          <li>Curriculum comparison: British, American, IB, Indian &amp; more</li>
-          <li>Curated shortlist matched to your needs and budget</li>
-          <li>Advice on applications, assessments &amp; timing</li>
-          <li>No school affiliations. No referral fees. Just honest advice.</li>
+          <li data-i18n="s4_b1">1:1 consultation on your child's profile &amp; family priorities</li>
+          <li data-i18n="s4_b2">Curriculum comparison: British, American, IB, Indian &amp; more</li>
+          <li data-i18n="s4_b3">Curated shortlist matched to your needs and budget</li>
+          <li data-i18n="s4_b4">Advice on applications, assessments &amp; timing</li>
+          <li data-i18n="s4_b5">No affiliations. No referral fees. Just honest advice.</li>
         </ul>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">📋</div>
-        <h3 class="service-title">Academic Advisory</h3>
-        <span class="service-age">Expert Sounding Board</span>
-        <p class="service-desc">Already enrolled but have questions? Need a second opinion from someone who truly understands the system?</p>
+        <h3 class="service-title" data-i18n="s5_title">Academic Advisory</h3>
+        <span class="service-age" data-i18n="s5_age">Expert Sounding Board</span>
+        <p class="service-desc" data-i18n="s5_desc">Already enrolled but have questions? Need a second opinion from someone who truly understands the system?</p>
         <ul class="service-bullets">
-          <li>Understanding your child's school reports &amp; assessments</li>
-          <li>Comparing curricula for international relocations</li>
-          <li>Identifying learning gaps and how to address them</li>
-          <li>Knowing when — and what kind of — support is needed</li>
-          <li>Transition year guidance (FS1, Year 1, Year 7)</li>
+          <li data-i18n="s5_b1">Understanding school reports &amp; assessments</li>
+          <li data-i18n="s5_b2">Comparing curricula for international relocations</li>
+          <li data-i18n="s5_b3">Identifying learning gaps and how to address them</li>
+          <li data-i18n="s5_b4">Transition year guidance (FS1, Year 1, Year 7)</li>
         </ul>
       </div>
     </div>
   </div>
-
   <div class="tab-panel" id="tab-adults">
     <div class="services-grid services-grid-2col">
       <div class="service-card reveal">
         <div class="service-icon">💼</div>
-        <h3 class="service-title">Business English</h3>
-        <span class="service-age">Adults · All Levels</span>
-        <p class="service-desc">Professional English for the workplace — from day-to-day emails to boardroom presentations. Tailored to your industry, your role, and your specific communication gaps.</p>
+        <h3 class="service-title" data-i18n="s6_title">Business English</h3>
+        <span class="service-age" data-i18n="s6_age">Adults · All Levels</span>
+        <p class="service-desc" data-i18n="s6_desc">Professional English for the workplace — from emails to boardroom presentations. Tailored to your industry and communication gaps.</p>
         <ul class="service-bullets">
-          <li>Written communication — emails, reports, proposals</li>
-          <li>Presentation skills and professional vocabulary</li>
-          <li>Meeting and negotiation language</li>
-          <li>Confidence in multinational and corporate environments</li>
-          <li>Flexible scheduling for working professionals</li>
-          <li>Online sessions available globally</li>
+          <li data-i18n="s6_b1">Written communication — emails, reports, proposals</li>
+          <li data-i18n="s6_b2">Presentation skills and professional vocabulary</li>
+          <li data-i18n="s6_b3">Meeting and negotiation language</li>
+          <li data-i18n="s6_b4">Flexible scheduling for working professionals</li>
+          <li data-i18n="s6_b5">Online sessions available globally</li>
         </ul>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">🎓</div>
-        <h3 class="service-title">Academic English & Writing</h3>
-        <span class="service-age">University Level</span>
-        <p class="service-desc">For students and researchers who need their written English to meet international academic standards — without losing their own voice.</p>
+        <h3 class="service-title" data-i18n="s7_title">Academic English &amp; Writing</h3>
+        <span class="service-age" data-i18n="s7_age">University Level</span>
+        <p class="service-desc" data-i18n="s7_desc">For students and researchers who need their written English to meet international academic standards.</p>
         <ul class="service-bullets">
-          <li>Academic writing coaching — structure, argumentation, style</li>
-          <li>Proofreading with tracked corrections and explanations</li>
-          <li>Citation guidance (APA, Harvard, MLA)</li>
-          <li>Plagiarism awareness and paraphrase techniques</li>
-          <li>IELTS &amp; TOEFL preparation (taught by certified examiner)</li>
+          <li data-i18n="s7_b1">Academic writing coaching — structure, argumentation, style</li>
+          <li data-i18n="s7_b2">Proofreading with tracked corrections and explanations</li>
+          <li data-i18n="s7_b3">Citation guidance (APA, Harvard, MLA)</li>
+          <li data-i18n="s7_b4">Plagiarism awareness and paraphrase techniques</li>
+          <li data-i18n="s7_b5">IELTS &amp; TOEFL preparation</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY -->
 <section id="why">
   <div class="reveal">
-    <div class="section-eyebrow" style="color: var(--gold-light);">Why Choose Assel</div>
-    <h2 class="section-title" style="color: var(--white);">Not Every Tutor Has Been<br><em class="serif" style="color: var(--gold);">Inside the System</em></h2>
-    <p class="section-lead">There's a meaningful difference between someone who teaches and someone who has built, led, and researched education from the ground up.</p>
+    <div class="section-eyebrow" style="color:var(--gold-light);" data-i18n="why_eyebrow">Why Choose Assel</div>
+    <h2 class="section-title" style="color:var(--white);" data-i18n="why_title">Not Every Tutor Has Been<br><em class="serif" style="color:var(--gold);">Inside the System</em></h2>
+    <p class="section-lead" data-i18n="why_lead">There's a meaningful difference between someone who teaches and someone who has built, led, and researched education from the ground up.</p>
   </div>
   <div class="why-grid">
-    <div class="why-card reveal">
-      <div class="why-number">01</div>
-      <div class="why-title">Genuinely Independent</div>
-      <div class="why-text">No school affiliations, no referral commissions. Advice driven entirely by what's right for your child — nothing else.</div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-number">02</div>
-      <div class="why-title">Research Meets Reality</div>
-      <div class="why-text">PhD-level knowledge of how children actually learn, applied with practical classroom experience. Theory grounded in the real world.</div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-number">03</div>
-      <div class="why-title">International Depth</div>
-      <div class="why-text">Having lived, taught, and studied across 5 countries, Assel understands how curricula compare — critical knowledge in Dubai's diverse school market.</div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-number">04</div>
-      <div class="why-title">School Leader Perspective</div>
-      <div class="why-text">As a former vice-principal overseeing 100+ teachers, Assel understands what schools value and how to give your child the best chance.</div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-number">05</div>
-      <div class="why-title">Child-First Always</div>
-      <div class="why-text">Over 15 years of direct work with children of all ages and nationalities. Deep empathy for how children feel — not just how they perform.</div>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-number">06</div>
-      <div class="why-title">Dubai Local Knowledge</div>
-      <div class="why-text">Based in Dubai. Stays current on KHDA inspection reports, admissions trends, fee structures, and which schools are the right fit for which families.</div>
-    </div>
+    <div class="why-card reveal"><div class="why-number">01</div><div class="why-title" data-i18n="w1_t">Genuinely Independent</div><div class="why-text" data-i18n="w1_d">No school affiliations, no referral commissions. Advice driven entirely by what's right for your child.</div></div>
+    <div class="why-card reveal"><div class="why-number">02</div><div class="why-title" data-i18n="w2_t">Research Meets Reality</div><div class="why-text" data-i18n="w2_d">PhD-level knowledge of how children actually learn, applied with practical classroom experience.</div></div>
+    <div class="why-card reveal"><div class="why-number">03</div><div class="why-title" data-i18n="w3_t">International Depth</div><div class="why-text" data-i18n="w3_d">Lived, taught, and studied across 5 countries. Understands how curricula compare in Dubai's diverse school market.</div></div>
+    <div class="why-card reveal"><div class="why-number">04</div><div class="why-title" data-i18n="w4_t">School Leader Perspective</div><div class="why-text" data-i18n="w4_d">Former vice-principal overseeing 100+ teachers. Understands what schools value and how to give your child the best chance.</div></div>
+    <div class="why-card reveal"><div class="why-number">05</div><div class="why-title" data-i18n="w5_t">Child-First Always</div><div class="why-text" data-i18n="w5_d">Over 15 years of direct work with children of all ages and nationalities. Deep empathy for how children feel, not just how they perform.</div></div>
+    <div class="why-card reveal"><div class="why-number">06</div><div class="why-title" data-i18n="w6_t">Dubai Local Knowledge</div><div class="why-text" data-i18n="w6_d">Based in Dubai. Current on KHDA reports, admissions trends, fee structures, and which schools fit which families.</div></div>
   </div>
 </section>
 
-<!-- PROCESS -->
 <section id="process">
-  <div class="reveal" style="text-align: center;">
-    <div class="section-eyebrow">How It Works</div>
-    <h2 class="section-title">Simple. Transparent. Stress-Free.</h2>
-    <p class="section-lead" style="margin: 0 auto;">Getting started takes three steps and less than 20 minutes of your time.</p>
+  <div class="reveal" style="text-align:center;">
+    <div class="section-eyebrow" data-i18n="proc_eyebrow">How It Works</div>
+    <h2 class="section-title" data-i18n="proc_title">Simple. Transparent. Stress-Free.</h2>
+    <p class="section-lead" style="margin:0 auto;" data-i18n="proc_lead">Getting started takes three steps and less than 20 minutes of your time.</p>
   </div>
   <div class="process-steps">
-    <div class="step reveal">
-      <div class="step-number">1</div>
-      <div class="step-title">Book a Free Call</div>
-      <p class="step-text">A relaxed 20-minute conversation about your child and what you're looking for. No commitment, no pressure.</p>
-    </div>
-    <div class="step reveal">
-      <div class="step-number">2</div>
-      <div class="step-title">Get Your Proposal</div>
-      <p class="step-text">Receive a tailored plan — whether that's a tutoring schedule, a school shortlist, or an advisory session matched to your needs.</p>
-    </div>
-    <div class="step reveal">
-      <div class="step-number">3</div>
-      <div class="step-title">Start with Confidence</div>
-      <p class="step-text">Begin with the knowledge that your child is in experienced, caring hands — and that you have an expert in your corner.</p>
-    </div>
+    <div class="step reveal"><div class="step-number">1</div><div class="step-title" data-i18n="step1_t">Book a Free Call</div><p class="step-text" data-i18n="step1_d">A relaxed 20-minute conversation about your child and what you're looking for. No commitment, no pressure.</p></div>
+    <div class="step reveal"><div class="step-number">2</div><div class="step-title" data-i18n="step2_t">Get Your Proposal</div><p class="step-text" data-i18n="step2_d">Receive a tailored plan — whether that's a tutoring schedule, a school shortlist, or an advisory session.</p></div>
+    <div class="step reveal"><div class="step-number">3</div><div class="step-title" data-i18n="step3_t">Start with Confidence</div><p class="step-text" data-i18n="step3_d">Begin knowing your child is in experienced, caring hands — and that you have an expert in your corner.</p></div>
   </div>
 </section>
 
-<!-- FAQ -->
 <section id="faq">
-  <div class="reveal" style="text-align: center; margin-bottom: 2rem;">
+  <div class="reveal" style="text-align:center;margin-bottom:2rem;">
     <div class="section-eyebrow">FAQ</div>
-    <h2 class="section-title">Common Questions</h2>
+    <h2 class="section-title" data-i18n="faq_title">Common Questions</h2>
   </div>
   <div class="faq-grid reveal">
-    <div class="faq-item">
-      <div class="faq-question">Do you offer online or in-person sessions?</div>
-      <div class="faq-answer">Both. In-person sessions are available in Dubai. Online sessions are available for families anywhere in the world — particularly useful for school consulting for families relocating to Dubai.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">What age groups do you work with?</div>
-      <div class="faq-answer">Children aged 3.5–12 for tutoring and school readiness. School consulting and academic advisory sessions are for parents of children of any school age.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">How do sessions work for young children?</div>
-      <div class="faq-answer">Sessions are structured but playful, tailored to short attention spans and natural curiosity. Each child gets a personalised learning plan, and progress is shared with parents regularly — typically 45–60 minutes per session.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">Which Dubai schools are you familiar with?</div>
-      <div class="faq-answer">I have broad knowledge across the full range of Dubai's private school sector — British, American, IB, Indian, and more — and stay current with KHDA inspection reports, admissions timelines, and fee structures.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">Do you have affiliations with any schools?</div>
-      <div class="faq-answer">None. I accept no referral fees or commissions from schools. My advice is entirely independent and based solely on what's right for your child and family.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">Do you offer packages or one-off sessions?</div>
-      <div class="faq-answer">Both are available. For tutoring, regular weekly sessions consistently produce the best results. For consulting, many families find a single structured session gives them all the clarity they need.</div>
-    </div>
+    <div class="faq-item"><div class="faq-question" data-i18n="faq1_q">Do you offer online or in-person sessions?</div><div class="faq-answer" data-i18n="faq1_a">Both. In-person sessions are available in Dubai. Online sessions are available for families anywhere in the world — particularly useful for families relocating to Dubai.</div></div>
+    <div class="faq-item"><div class="faq-question" data-i18n="faq2_q">What age groups do you work with?</div><div class="faq-answer" data-i18n="faq2_a">Children aged 3.5–18 for tutoring. School consulting and academic advisory are for parents of children of any school age.</div></div>
+    <div class="faq-item"><div class="faq-question" data-i18n="faq3_q">How do sessions work for young children?</div><div class="faq-answer" data-i18n="faq3_a">Sessions are structured but playful, tailored to short attention spans. Each child gets a personalised learning plan — typically 45–60 minutes. Progress is shared with parents regularly.</div></div>
+    <div class="faq-item"><div class="faq-question" data-i18n="faq4_q">Which Dubai schools are you familiar with?</div><div class="faq-answer" data-i18n="faq4_a">I have broad knowledge across Dubai's full private school sector — British, American, IB, Indian, and more — and stay current with KHDA inspection reports.</div></div>
+    <div class="faq-item"><div class="faq-question" data-i18n="faq5_q">Do you have affiliations with any schools?</div><div class="faq-answer" data-i18n="faq5_a">None. I accept no referral fees or commissions. My advice is entirely independent and based solely on what's right for your child.</div></div>
+    <div class="faq-item"><div class="faq-question" data-i18n="faq6_q">Do you offer packages or one-off sessions?</div><div class="faq-answer" data-i18n="faq6_a">Both. Regular weekly sessions produce the best results for tutoring. For consulting, many families find a single structured session gives them all the clarity they need.</div></div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="contact-wrapper">
     <div class="contact-info reveal">
-      <div class="section-eyebrow">Contact</div>
-      <h2 class="section-title serif">Let's Talk About Your Child</h2>
-      <p>Whether you're new to Dubai, weighing a school move, or simply want your child to thrive — reach out. The first conversation is free and there's no obligation.</p>
+      <div class="section-eyebrow" data-i18n="contact_eyebrow">Contact</div>
+      <h2 class="section-title serif" data-i18n="contact_title">Let's Talk About Your Child</h2>
+      <p data-i18n="contact_lead">Whether you're new to Dubai, weighing a school move, or simply want your child to thrive — reach out. The first conversation is free.</p>
       <div class="contact-details">
-        <div class="contact-detail">
-          <div class="contact-detail-icon">📍</div>
-          <span>Dubai, United Arab Emirates</span>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">📧</div>
-          <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7d0e091c101f1816120b1c0e0e18113d1a101c1411531e1210">[email&#160;protected]</a></span>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">💼</div>
-          <span><a href="https://www.linkedin.com/in/assel-csonkastambekova-ph-d-0340b012/" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: none;">LinkedIn Profile ↗</a></span>
-        </div>
+        <div class="contact-detail"><div class="contact-detail-icon">📍</div><span data-i18n="contact_loc">Dubai, United Arab Emirates</span></div>
+        <div class="contact-detail"><div class="contact-detail-icon">💼</div><span><a href="https://www.linkedin.com/in/assel-csonka-stambekova-ph-d-0340b012/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">LinkedIn ↗</a></span></div>
       </div>
     </div>
     <div class="contact-form reveal">
-      <h3 class="form-title">Send a Message</h3>
+      <h3 class="form-title" data-i18n="form_title">Send a Message</h3>
       <div id="contact-form-inner">
         <div class="form-row">
-          <div class="form-group">
-            <label>First Name</label>
-            <input type="text" id="fname" placeholder="Sarah" />
-          </div>
-          <div class="form-group">
-            <label>Last Name</label>
-            <input type="text" id="lname" placeholder="Al Rashidi" />
-          </div>
+          <div class="form-group"><label data-i18n="form_fname">First Name</label><input type="text" id="fname" placeholder="Sarah"></div>
+          <div class="form-group"><label data-i18n="form_lname">Last Name</label><input type="text" id="lname" placeholder="Al Rashidi"></div>
         </div>
+        <div class="form-group"><label data-i18n="form_email">Email Address</label><input type="email" id="femail" placeholder="you@example.com"></div>
         <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" id="email" placeholder="you@example.com" />
-        </div>
-        <div class="form-group">
-          <label>I'm interested in</label>
+          <label data-i18n="form_service">I'm interested in</label>
           <select id="service">
-            <option value="">Select a service…</option>
-            <option>English Tutoring (Child)</option>
-            <option>Maths Support (Child)</option>
-            <option>School Readiness Preparation</option>
-            <option>Dubai School Selection Consulting</option>
-            <option>Academic Advisory Session</option>
-            <option>Not sure yet — just exploring</option>
+            <option value="" data-i18n="form_svc0">Select a service…</option>
+            <option data-i18n="form_svc1">English Tutoring (Child)</option>
+            <option data-i18n="form_svc2">Maths Support (Child)</option>
+            <option data-i18n="form_svc3">School Readiness Preparation</option>
+            <option data-i18n="form_svc4">Dubai School Selection Consulting</option>
+            <option data-i18n="form_svc5">Academic Advisory Session</option>
+            <option data-i18n="form_svc6">Business English (Adult)</option>
+            <option data-i18n="form_svc7">Academic English &amp; Writing</option>
+            <option data-i18n="form_svc8">Not sure yet — just exploring</option>
           </select>
         </div>
-        <div class="form-group">
-          <label>Child's Age (if applicable)</label>
-          <input type="text" id="age" placeholder="e.g. 6 years old" />
-        </div>
-        <div class="form-group">
-          <label>Your Message</label>
-          <textarea id="message" placeholder="Tell me a little about your child and what you're looking for…"></textarea>
-        </div>
-        <button class="form-submit" onclick="submitForm()">Send Message →</button>
+        <div class="form-group"><label data-i18n="form_age">Child's Age (if applicable)</label><input type="text" id="age" placeholder="e.g. 6 years old"></div>
+        <div class="form-group"><label data-i18n="form_msg">Your Message</label><textarea id="message" placeholder="Tell me a little about your child and what you're looking for…"></textarea></div>
+        <button class="form-submit" onclick="submitForm()" data-i18n="form_btn">Send Message →</button>
       </div>
       <div class="form-success" id="form-success">
-        <div style="font-size: 2rem; margin-bottom: 0.5rem;">✦</div>
-        Thank you — your message has been sent.<br>
-        <span style="font-size: 0.9rem; font-family: 'DM Sans', sans-serif; color: var(--muted); font-weight: 300;">Assel will be in touch within 24 hours.</span>
+        <div style="font-size:2rem;margin-bottom:0.5rem;">✦</div>
+        <span data-i18n="form_thanks">Thank you — your message has been sent.</span><br>
+        <span style="font-size:0.9rem;font-family:'DM Sans',sans-serif;color:var(--muted);font-weight:300;" data-i18n="form_reply">Assel will be in touch within 24 hours.</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">Assel <span>Csonka-Stambekova</span></div>
-  <div class="footer-text">© 2025 · Education Consultant & Tutor · Dubai, UAE</div>
+  <div class="footer-text" data-i18n="footer_copy">© 2025 · Education Consultant &amp; Tutor · Dubai, UAE</div>
   <div class="footer-links">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" data-i18n="nav_about">About</a>
+    <a href="#services" data-i18n="nav_services">Services</a>
+    <a href="#contact" data-i18n="nav_cta">Contact</a>
   </div>
 </footer>
 
+<a href="https://wa.me/971526768018?text=Hi%20Assel%2C%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Nav scroll
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-  });
+const T={en:{nav_about:"About",nav_services:"Services",nav_why:"Why Assel",nav_cta:"Book a Call",hero_eyebrow:"Education Consultant · Dubai",hero_title:"Give Your Child the Start<br><em>They Deserve</em>",hero_subtitle:"Expert tutoring and private school guidance for Dubai families — backed by PhD-level research and 15+ years in classrooms and school leadership.",hero_cta1:"Book a Free 20-Min Call",hero_cta2:"Explore Services",hero_quote:'"The right foundation at the right age changes everything."',stat1:"Years of Experience",stat2:"Countries Lived &amp; Taught",stat3:"Teacher Education",about_eyebrow:"About",about_title:"Teacher. Researcher.<br>Your Family's Advocate.",about_p1:'I\'m Assel, former <a href="https://astana.fizmat.kz/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(196,154,74,0.4);">National School of Physics and Math for Gifted Children</a> vice-principal, with a PhD in Education from Eötvös Loránd University, Hungary (cum laude), CELTA and IHCYL certified English teacher to Adults and Young Learners, MSc in Educational Leadership from Nazarbayev University (world\'s top 176–200 in Education), and BEd with Honours from Kazakh Ablai Khan University of International Relations and World Languages.',about_p2:"I've spent over 15 years working inside schools across Kazakhstan, Hungary, and the UAE. I know how education systems work from the inside — and I use that knowledge to help your child thrive.",about_p3:"Whether you need focused tutoring, academic writing support, or clear-headed advice on navigating Dubai's complex school landscape, I offer something rare: deep academic expertise combined with genuine, hands-on classroom experience.",pillar1_title:"Research-Backed Approach",pillar1_text:"PhD in Teacher Education, cum laude. I understand how children learn — not just from experience, but from the science of it.",pillar2_title:"Internationally Experienced",pillar2_text:"Taught and lived across 5 countries. Deep understanding of British, American, IB, and international curricula.",pillar3_title:"School Leadership Perspective",pillar3_text:"Former vice-principal overseeing 100+ teachers. I know what schools look for — and how to position your child.",badge_available:"Available Now",cred_title:"Qualifications &amp; Background",cred1:"PhD in Teacher Education, <em>cum laude</em> · Eötvös Loránd University, Budapest",cred2:'MSc Educational Leadership · Nazarbayev University <span style="color:var(--gold);font-size:0.78rem;">(World Top 176–200)</span>',cred3:"BEd with Honours · Kazakh Ablai Khan University",cred4:"CELTA Certified — English Teaching to Adults (Cambridge)",cred5:"IHCYL Certified — English for Young Learners (International House)",cred6:'Vice-Principal · <a href="https://astana.fizmat.kz/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">National School of Physics &amp; Math</a>, Kazakhstan',cred7:"3 peer-reviewed publications · Educational technology &amp; teacher education",cred8:"Peer reviewer: EERA · <em>British Journal of Educational Technology</em> (Q1) · <em>Review of Education</em> (Q1) · <em>European Journal of Teacher Education</em> (Q1)",cred9:"$34,000 research grant · 5-year full PhD scholarship",svc_eyebrow:"Services",svc_title:"How I Can Help",svc_lead:"Tailored support for children, parents, and adult learners — from early literacy to navigating Dubai's school landscape.",tab_children:"For Children",tab_parents:"For Parents",tab_adults:"For Adults",s1_title:"English Tutoring",s1_age:"Ages 4–18",s1_desc:"Building genuine confidence in English — from first words to fluent, independent expression.",s1_b1:"Phonics, reading &amp; writing foundations for early learners",s1_b2:"Vocabulary, comprehension &amp; communication for primary &amp; secondary",s1_b3:"<strong>Creative writing</strong> — building core skills for strong communication",s1_b4:"<strong>Academic writing</strong> — proofreading, citations, plagiarism checks, grammar",s1_b5:"Online and in-person (Dubai) available",s2_title:"Maths Support",s2_age:"Ages 5–12",s2_desc:"Real understanding, not just memorised steps. Maths anxiety starts early — so does the solution.",s2_b1:"Early numeracy for Reception and Year 1–2",s2_b2:"Core curriculum support for Years 3–6",s2_b3:"Aligned to British, American &amp; IB curricula",s2_b4:"Progress tracked and shared with parents",s3_title:"School Readiness",s3_age:"Ages 3.5–5",s3_desc:"Help your child arrive prepared — academically, socially, and emotionally.",s3_b1:"Pre-reading and pre-writing skills",s3_b2:"Listening, following instructions, classroom behaviour",s3_b3:"Confidence-building through age-appropriate activities",s3_b4:"Peace of mind for parents on Day One",s4_title:"Dubai School Selection",s4_age:"Independent · Unbiased",s4_desc:"Over 200 private schools. Six major curricula. KHDA ratings. I cut through the noise with honest, expert guidance.",s4_b1:"1:1 consultation on your child's profile &amp; family priorities",s4_b2:"Curriculum comparison: British, American, IB, Indian &amp; more",s4_b3:"Curated shortlist matched to your needs and budget",s4_b4:"Advice on applications, assessments &amp; timing",s4_b5:"No affiliations. No referral fees. Just honest advice.",s5_title:"Academic Advisory",s5_age:"Expert Sounding Board",s5_desc:"Already enrolled but have questions? Need a second opinion from someone who truly understands the system?",s5_b1:"Understanding school reports &amp; assessments",s5_b2:"Comparing curricula for international relocations",s5_b3:"Identifying learning gaps and how to address them",s5_b4:"Transition year guidance (FS1, Year 1, Year 7)",s6_title:"Business English",s6_age:"Adults · All Levels",s6_desc:"Professional English for the workplace — from emails to boardroom presentations.",s6_b1:"Written communication — emails, reports, proposals",s6_b2:"Presentation skills and professional vocabulary",s6_b3:"Meeting and negotiation language",s6_b4:"Flexible scheduling for working professionals",s6_b5:"Online sessions available globally",s7_title:"Academic English &amp; Writing",s7_age:"University Level",s7_desc:"For students and researchers who need their written English to meet international academic standards.",s7_b1:"Academic writing coaching — structure, argumentation, style",s7_b2:"Proofreading with tracked corrections and explanations",s7_b3:"Citation guidance (APA, Harvard, MLA)",s7_b4:"Plagiarism awareness and paraphrase techniques",s7_b5:"IELTS &amp; TOEFL preparation",why_eyebrow:"Why Choose Assel",why_title:"Not Every Tutor Has Been<br><em class='serif' style='color:var(--gold);'>Inside the System</em>",why_lead:"There's a meaningful difference between someone who teaches and someone who has built, led, and researched education from the ground up.",w1_t:"Genuinely Independent",w1_d:"No school affiliations, no referral commissions. Advice driven entirely by what's right for your child.",w2_t:"Research Meets Reality",w2_d:"PhD-level knowledge of how children actually learn, applied with practical classroom experience.",w3_t:"International Depth",w3_d:"Lived, taught, and studied across 5 countries. Understands how curricula compare in Dubai's diverse school market.",w4_t:"School Leader Perspective",w4_d:"Former vice-principal overseeing 100+ teachers. Understands what schools value and how to give your child the best chance.",w5_t:"Child-First Always",w5_d:"Over 15 years of direct work with children of all ages and nationalities. Deep empathy for how children feel, not just how they perform.",w6_t:"Dubai Local Knowledge",w6_d:"Based in Dubai. Current on KHDA reports, admissions trends, fee structures, and which schools fit which families.",proc_eyebrow:"How It Works",proc_title:"Simple. Transparent. Stress-Free.",proc_lead:"Getting started takes three steps and less than 20 minutes of your time.",step1_t:"Book a Free Call",step1_d:"A relaxed 20-minute conversation about your child and what you're looking for. No commitment, no pressure.",step2_t:"Get Your Proposal",step2_d:"Receive a tailored plan — whether that's a tutoring schedule, a school shortlist, or an advisory session.",step3_t:"Start with Confidence",step3_d:"Begin knowing your child is in experienced, caring hands — and that you have an expert in your corner.",faq_title:"Common Questions",faq1_q:"Do you offer online or in-person sessions?",faq1_a:"Both. In-person sessions are available in Dubai. Online sessions are available for families anywhere in the world.",faq2_q:"What age groups do you work with?",faq2_a:"Children aged 3.5–18 for tutoring. School consulting and academic advisory are for parents of children of any school age.",faq3_q:"How do sessions work for young children?",faq3_a:"Sessions are structured but playful, tailored to short attention spans. Each child gets a personalised learning plan — typically 45–60 minutes.",faq4_q:"Which Dubai schools are you familiar with?",faq4_a:"Broad knowledge across Dubai's full private school sector — British, American, IB, Indian, and more — current with KHDA inspection reports.",faq5_q:"Do you have affiliations with any schools?",faq5_a:"None. I accept no referral fees or commissions. My advice is entirely independent and based solely on what's right for your child.",faq6_q:"Do you offer packages or one-off sessions?",faq6_a:"Both. Regular weekly sessions produce the best results for tutoring. For consulting, many families find a single session gives them all the clarity they need.",contact_eyebrow:"Contact",contact_title:"Let's Talk About Your Child",contact_lead:"Whether you're new to Dubai, weighing a school move, or simply want your child to thrive — reach out. The first conversation is free.",contact_loc:"Dubai, United Arab Emirates",form_title:"Send a Message",form_fname:"First Name",form_lname:"Last Name",form_email:"Email Address",form_service:"I'm interested in",form_svc0:"Select a service…",form_svc1:"English Tutoring (Child)",form_svc2:"Maths Support (Child)",form_svc3:"School Readiness Preparation",form_svc4:"Dubai School Selection Consulting",form_svc5:"Academic Advisory Session",form_svc6:"Business English (Adult)",form_svc7:"Academic English &amp; Writing",form_svc8:"Not sure yet — just exploring",form_age:"Child's Age (if applicable)",form_msg:"Your Message",form_btn:"Send Message →",form_thanks:"Thank you — your message has been sent.",form_reply:"Assel will be in touch within 24 hours.",footer_copy:"© 2025 · Education Consultant &amp; Tutor · Dubai, UAE"},
+ru:{nav_about:"Обо мне",nav_services:"Услуги",nav_why:"Почему Асель",nav_cta:"Записаться",hero_eyebrow:"Консультант по образованию · Дубай",hero_title:"Дайте вашему ребёнку<br><em>лучший старт</em>",hero_subtitle:"Индивидуальные занятия и помощь в выборе школы для семей в Дубае — на основе PhD-исследований и 15+ лет опыта в образовании.",hero_cta1:"Бесплатная консультация 20 мин",hero_cta2:"Услуги",hero_quote:'"Правильный фундамент в нужном возрасте меняет всё."',stat1:"Лет опыта",stat2:"Стран работы и жизни",stat3:"Кандидат наук",about_eyebrow:"Обо мне",about_title:"Педагог. Исследователь.<br>Ваш союзник.",about_p1:'Меня зовут Асель. Я — бывший заместитель директора <a href="https://astana.fizmat.kz/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(196,154,74,0.4);">Физико-математической школы для одарённых детей</a>, кандидат педагогических наук Университета Этвёш Лоранд (Венгрия, с отличием), сертифицированный преподаватель английского языка (CELTA и IHCYL), магистр в области образовательного лидерства Назарбаев Университета (топ 176–200 в мире) и бакалавр с отличием КазУМОиМЯ им. Абылай хана.',about_p2:"Более 15 лет я работаю внутри системы образования — в Казахстане, Венгрии и ОАЭ. Я знаю, как устроены школы изнутри, и использую эти знания, чтобы помочь вашему ребёнку.",about_p3:"Нужны занятия с ребёнком, помощь с академическим письмом или объективный совет по выбору школы в Дубае — я предлагаю редкое сочетание: глубокую академическую экспертизу и реальный практический опыт.",pillar1_title:"Научный подход",pillar1_text:"Кандидат педагогических наук, с отличием. Я понимаю, как дети учатся — не только из опыта, но и из науки.",pillar2_title:"Международный опыт",pillar2_text:"Жила и преподавала в 5 странах. Глубокое понимание британской, американской, IB и других программ.",pillar3_title:"Взгляд руководителя",pillar3_text:"Бывший завуч, руководившая 100+ учителями. Я знаю, что ищут школы — и как позиционировать вашего ребёнка.",badge_available:"Принимаю учеников",cred_title:"Квалификация",cred1:"Кандидат педагогических наук, <em>с отличием</em> · Университет Этвёш Лоранд, Будапешт",cred2:'Магистр образовательного лидерства · Назарбаев Университет <span style="color:var(--gold);font-size:0.78rem;">(Топ 176–200 в мире)</span>',cred3:"Бакалавр с отличием · КазУМОиМЯ им. Абылай хана",cred4:"CELTA — преподавание английского взрослым (Cambridge)",cred5:"IHCYL — английский для детей и подростков (International House)",cred6:'Заместитель директора · <a href="https://astana.fizmat.kz/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">Физико-математическая школа</a>, Казахстан',cred7:"3 рецензируемые публикации · Образовательные технологии и подготовка учителей",cred8:"Рецензент: EERA · <em>British Journal of Educational Technology</em> (Q1) · <em>Review of Education</em> (Q1) · <em>European Journal of Teacher Education</em> (Q1)",cred9:"Грант $34 000 · 5-летняя полная стипендия PhD",svc_eyebrow:"Услуги",svc_title:"Чем я могу помочь",svc_lead:"Индивидуальная поддержка для детей, родителей и взрослых — от развития грамотности до выбора школы.",tab_children:"Детям",tab_parents:"Родителям",tab_adults:"Взрослым",s1_title:"Английский язык",s1_age:"4–18 лет",s1_desc:"Уверенный английский — от первых слов до свободного самовыражения. Структурированно, увлекательно, в темпе ребёнка.",s1_b1:"Фоника, чтение и письмо для младших школьников",s1_b2:"Словарный запас, понимание и коммуникация",s1_b3:"<strong>Творческое письмо</strong> — основа сильных коммуникативных навыков",s1_b4:"<strong>Академическое письмо</strong> — корректура, цитирование, проверка на плагиат",s1_b5:"Онлайн и очно (Дубай)",s2_title:"Математика",s2_age:"5–12 лет",s2_desc:"Настоящее понимание, а не заученные правила. Страх перед математикой начинается рано — и решение тоже.",s2_b1:"Числа и счёт для подготовительных классов",s2_b2:"Поддержка программы для 2–6 классов",s2_b3:"Британская, американская и IB программы",s2_b4:"Отчёты о прогрессе для родителей",s3_title:"Подготовка к школе",s3_age:"3,5–5 лет",s3_desc:"Помогите ребёнку прийти в школу готовым — академически, социально и эмоционально.",s3_b1:"Предчтение и предписьмо",s3_b2:"Внимание, инструкции, поведение в классе",s3_b3:"Уверенность через игровые занятия",s3_b4:"Спокойствие для родителей с первого дня",s4_title:"Выбор школы в Дубае",s4_age:"Независимо · Объективно",s4_desc:"Более 200 частных школ. Шесть программ. Рейтинги KHDA. Помогу разобраться без лишнего стресса.",s4_b1:"Консультация 1:1 по профилю ребёнка и приоритетам семьи",s4_b2:"Сравнение программ: британская, американская, IB, индийская",s4_b3:"Подобранный список школ под ваш бюджет",s4_b4:"Помощь с документами, оценкой и сроками",s4_b5:"Никаких аффилиаций. Никаких комиссий. Только честный совет.",s5_title:"Академическое консультирование",s5_age:"Экспертный взгляд",s5_desc:"Уже учитесь в школе, но есть вопросы? Нужен независимый взгляд человека, который знает систему изнутри?",s5_b1:"Понимание отчётов и оценок школы",s5_b2:"Сравнение программ при переезде",s5_b3:"Выявление пробелов в знаниях",s5_b4:"Поддержка при переходе (1-й, 7-й класс и др.)",s6_title:"Деловой английский",s6_age:"Взрослые · Все уровни",s6_desc:"Профессиональный английский — от деловой переписки до презентаций. Адаптировано под вашу отрасль.",s6_b1:"Деловые письма, отчёты, предложения",s6_b2:"Навыки презентации и профессиональная лексика",s6_b3:"Язык переговоров и совещаний",s6_b4:"Гибкое расписание для работающих",s6_b5:"Онлайн занятия по всему миру",s7_title:"Академический английский",s7_age:"Университетский уровень",s7_desc:"Для студентов и исследователей, которым нужен письменный английский международного академического уровня.",s7_b1:"Коучинг по академическому письму",s7_b2:"Корректура с отслеживанием правок",s7_b3:"Цитирование (APA, Harvard, MLA)",s7_b4:"Профилактика плагиата и перефразирование",s7_b5:"Подготовка к IELTS и TOEFL",why_eyebrow:"Почему Асель",why_title:"Не каждый репетитор знает систему<br><em class='serif' style='color:var(--gold);'>изнутри</em>",why_lead:"Есть принципиальная разница между тем, кто просто преподаёт, и тем, кто строил, руководил и исследовал образование.",w1_t:"Полная независимость",w1_d:"Никаких аффилиаций со школами, никаких комиссий. Только то, что лучше для вашего ребёнка.",w2_t:"Наука на практике",w2_d:"Знания PhD уровня о том, как дети учатся — применённые с реальным педагогическим опытом.",w3_t:"Международная глубина",w3_d:"5 стран, несколько систем образования. Понимает различия программ — критически важное знание для Дубая.",w4_t:"Взгляд руководителя",w4_d:"Бывший завуч. Знает, что ценят школы, и как лучше позиционировать вашего ребёнка.",w5_t:"Ребёнок — на первом месте",w5_d:"Более 15 лет прямой работы с детьми разных возрастов и национальностей.",w6_t:"Знание рынка Дубая",w6_d:"Живёт в Дубае. В курсе рейтингов KHDA, тенденций приёма и структуры школ.",proc_eyebrow:"Как это работает",proc_title:"Просто. Прозрачно. Без стресса.",proc_lead:"Начать — три шага и меньше 20 минут вашего времени.",step1_t:"Запись на консультацию",step1_d:"20-минутный разговор о вашем ребёнке. Без обязательств и давления.",step2_t:"Получите план",step2_d:"Индивидуальный план — расписание занятий, список школ или консультационная сессия.",step3_t:"Начните уверенно",step3_d:"Знайте, что ваш ребёнок в опытных заботливых руках — и рядом есть эксперт.",faq_title:"Частые вопросы",faq1_q:"Онлайн или очно?",faq1_a:"Оба формата. Очные занятия — в Дубае. Онлайн — для семей по всему миру, особенно для переезжающих в Дубай.",faq2_q:"С какими возрастами вы работаете?",faq2_a:"Дети 3,5–18 лет для репетиторства. Консультации по выбору школы — для родителей детей любого возраста.",faq3_q:"Как проходят занятия с маленькими детьми?",faq3_a:"Структурированно, но игриво. Каждый ребёнок получает индивидуальный план. Прогресс передаётся родителям.",faq4_q:"Какие школы Дубая вы знаете?",faq4_a:"Широкое знание всего сектора частных школ Дубая. Слежу за обновлениями KHDA.",faq5_q:"Есть ли у вас связи со школами?",faq5_a:"Никаких. Я не получаю вознаграждения от школ. Мои советы полностью независимы.",faq6_q:"Пакеты или разовые занятия?",faq6_a:"Оба варианта. Регулярные занятия дают лучший результат. Для консультаций зачастую достаточно одной встречи.",contact_eyebrow:"Контакты",contact_title:"Давайте поговорим о вашем ребёнке",contact_lead:"Вы только переехали в Дубай, думаете о смене школы или хотите, чтобы ребёнок успешно учился — напишите мне. Первая консультация бесплатна.",contact_loc:"Дубай, ОАЭ",form_title:"Написать сообщение",form_fname:"Имя",form_lname:"Фамилия",form_email:"Email",form_service:"Меня интересует",form_svc0:"Выберите услугу…",form_svc1:"Английский язык (ребёнок)",form_svc2:"Математика (ребёнок)",form_svc3:"Подготовка к школе",form_svc4:"Выбор школы в Дубае",form_svc5:"Академическое консультирование",form_svc6:"Деловой английский (взрослый)",form_svc7:"Академический английский",form_svc8:"Ещё не определился(ась)",form_age:"Возраст ребёнка (если применимо)",form_msg:"Ваше сообщение",form_btn:"Отправить сообщение →",form_thanks:"Спасибо — ваше сообщение отправлено.",form_reply:"Асель свяжется с вами в течение 24 часов.",footer_copy:"© 2025 · Консультант по образованию · Дубай, ОАЭ"}};
 
-  // Hamburger
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+let lang='en';
+function setLang(l){
+  lang=l;
+  const t=T[l];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(t[k]!==undefined)el.innerHTML=t[k];});
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent.toLowerCase()===l));
+  document.documentElement.lang=l;
+}
 
-  // Tabs
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      const panel = document.getElementById('tab-' + btn.dataset.tab);
-      if (panel) panel.classList.add('active');
-    });
-  });
+// Nav scroll
+const nb=document.getElementById('navbar');
+window.addEventListener('scroll',()=>nb.classList.toggle('scrolled',scrollY>50));
 
-  // FAQ
-  document.querySelectorAll('.faq-question').forEach(q => {
-    q.addEventListener('click', () => {
-      const item = q.parentElement;
-      const wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!wasOpen) item.classList.add('open');
-    });
-  });
+// Hamburger
+const hb=document.getElementById('hamburger'),nl=document.getElementById('nav-links');
+hb.addEventListener('click',()=>nl.classList.toggle('open'));
+nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
 
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+// Tabs
+document.querySelectorAll('.tab-btn').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  const p=document.getElementById('tab-'+btn.dataset.tab);
+  if(p)p.classList.add('active');
+}));
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+// FAQ
+document.querySelectorAll('.faq-question').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement,was=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!was)item.classList.add('open');
+}));
 
-  // Form
-  function submitForm() {
-    const fname = document.getElementById('fname').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    if (!fname || !email || !message) {
-      alert('Please fill in your name, email, and message before sending.');
-      return;
-    }
-    document.getElementById('contact-form-inner').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-  }
+// Reveal
+if('IntersectionObserver' in window){
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.05});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  setTimeout(()=>document.querySelectorAll('.reveal:not(.visible)').forEach(el=>el.classList.add('visible')),2000);
+}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));}
+
+// Form — sign up at formspree.io, set email to assel@assel-edu.org, paste your form ID below
+const FURL='https://formspree.io/f/YOUR_FORM_ID';
+async function submitForm(){
+  const fn=document.getElementById('fname').value.trim(),ln=document.getElementById('lname').value.trim(),em=document.getElementById('femail').value.trim(),sv=document.getElementById('service').value,ag=document.getElementById('age').value.trim(),ms=document.getElementById('message').value.trim();
+  if(!fn||!em||!ms){alert(lang==='ru'?'Пожалуйста, заполните имя, email и сообщение.':'Please fill in your name, email, and message.');return;}
+  const btn=document.querySelector('.form-submit');btn.textContent=lang==='ru'?'Отправка…':'Sending…';btn.disabled=true;
+  try{
+    const r=await fetch(FURL,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify({name:(fn+' '+ln).trim(),email:em,service:sv||'Not specified',child_age:ag||'N/A',message:ms})});
+    if(r.ok){document.getElementById('contact-form-inner').style.display='none';document.getElementById('form-success').style.display='block';}
+    else{btn.textContent=T[lang].form_btn;btn.disabled=false;alert('Something went wrong. Please email assel@assel-edu.org directly.');}
+  }catch(e){btn.textContent=T[lang].form_btn;btn.disabled=false;alert('Could not send. Please email assel@assel-edu.org directly.');}
+}
 </script>
 </body>
 </html>
