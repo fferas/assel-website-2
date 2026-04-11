@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://assel-edu.org/sitemap.xml
