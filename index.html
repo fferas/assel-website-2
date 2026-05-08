@@ -90,12 +90,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#FAF7F2;--cream-dark:#F0EAE0;--navy:#1A2744;--gold:#C49A4A;--gold-light:#D4AF6A;--warm-text:#3D3530;--muted:#8A7F75;--white:#FFFFFF;--border:rgba(196,154,74,0.25);}
+:root{--cream:#FAF7F2;--cream-dark:#F0EAE0;--navy:#1A2744;--gold:#C49A4A;--gold-light:#D4AF6A;--warm-text:#3D3530;--muted:#8A7F75;--white:#FFFFFF;--border:rgba(196,154,74,0.25);--error:#B83232;--success:#2D6A4F;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--warm-text);overflow-x:hidden;font-size:16px;line-height:1.7;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--warm-text);overflow-x:hidden;font-size:16px;line-height:1.6;}
 .serif{font-family:'Cormorant Garamond',Georgia,serif;}
-h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.15;}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.2;}
+
+/* SKIP LINK */
+.skip-link{position:absolute;top:-100%;left:1rem;z-index:999;padding:0.5rem 1.2rem;background:var(--navy);color:var(--white);text-decoration:none;font-size:0.85rem;border-radius:2px;transition:top 0.15s;}
+.skip-link:focus{top:0.75rem;}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 4rem;background:rgba(250,247,242,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s;}
@@ -105,33 +109,40 @@ nav.scrolled{box-shadow:0 2px 30px rgba(26,39,68,0.08);}
 .nav-links{display:flex;gap:2.2rem;list-style:none;align-items:center;}
 .nav-links a{text-decoration:none;color:var(--warm-text);font-size:0.82rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;}
 .nav-links a:hover{color:var(--gold);}
+.nav-links a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px;}
 .nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:0.55rem 1.4rem;border-radius:2px;}
 .nav-cta:hover{background:var(--gold)!important;}
 .nav-right{display:flex;align-items:center;gap:1.2rem;}
 .lang-toggle{display:flex;border:1px solid var(--border);border-radius:2px;overflow:hidden;}
-.lang-btn{padding:0.35rem 0.75rem;font-size:0.72rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;border:none;background:transparent;color:var(--muted);cursor:pointer;transition:all 0.2s;}
+.lang-btn{padding:0.35rem 0.75rem;font-size:0.72rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;border:none;background:transparent;color:var(--muted);cursor:pointer;transition:background-color 0.2s,color 0.2s;min-height:44px;}
 .lang-btn.active{background:var(--navy);color:var(--white);}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.lang-btn:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;min-width:44px;min-height:44px;align-items:center;justify-content:center;}
 .hamburger span{display:block;width:24px;height:2px;background:var(--navy);}
+.hamburger:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px;}
 
 /* HERO */
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;position:relative;overflow:hidden;padding-top:80px;}
 .hero-bg{position:absolute;inset:0;z-index:0;background:var(--cream);}
 .hero-bg::before{content:'';position:absolute;top:0;right:0;width:50%;height:100%;background:var(--navy) url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C49A4A' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E") repeat;}
-.hero-left{position:relative;z-index:1;padding:5rem 4rem 5rem 5rem;opacity:0;transform:translateY(30px);animation:fadeUp 0.9s 0.2s forwards;}
+.hero-left{position:relative;z-index:1;padding:5rem 4rem 5rem 5rem;opacity:0;transform:translateY(30px);animation:fadeUp 0.9s 0.2s ease-out forwards;}
 .hero-eyebrow{display:inline-block;font-size:0.75rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:1px solid var(--gold);}
 .hero-title{font-size:clamp(2.8rem,5vw,4.2rem);font-weight:400;color:var(--navy);margin-bottom:1.5rem;line-height:1.1;}
 .hero-title em{font-style:italic;color:var(--gold);}
 .hero-subtitle{font-size:1.05rem;color:var(--muted);max-width:480px;margin-bottom:2.5rem;font-weight:300;}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;}
-.btn-primary{background:var(--navy);color:var(--white);padding:0.85rem 2rem;text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;border-radius:2px;border:2px solid var(--navy);transition:all 0.2s;display:inline-block;}
-.btn-primary:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-2px);}
-.btn-secondary{background:transparent;color:var(--navy);padding:0.85rem 2rem;text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;border-radius:2px;border:2px solid var(--navy);transition:all 0.2s;display:inline-block;}
-.btn-secondary:hover{background:var(--navy);color:var(--white);}
+.btn-primary{background:var(--navy);color:var(--white);padding:0.85rem 2rem;text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;border-radius:2px;border:2px solid var(--navy);transition:background-color 0.15s ease-out,border-color 0.15s ease-out,transform 0.15s ease-out;display:inline-block;}
+.btn-primary:hover{background-color:var(--gold);border-color:var(--gold);transform:translateY(-2px);}
+.btn-primary:active{transform:translateY(0) scale(0.98);}
+.btn-primary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+.btn-secondary{background:transparent;color:var(--navy);padding:0.85rem 2rem;text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;border-radius:2px;border:2px solid var(--navy);transition:background-color 0.15s ease-out,color 0.15s ease-out,transform 0.15s ease-out;display:inline-block;}
+.btn-secondary:hover{background-color:var(--navy);color:var(--white);}
+.btn-secondary:active{transform:scale(0.98);}
+.btn-secondary:focus-visible{outline:2px solid var(--navy);outline-offset:3px;}
 .hero-stats{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--border);}
 .stat-number{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:400;color:var(--navy);line-height:1;}
 .stat-label{font-size:0.75rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.25rem;}
-.hero-right{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:5rem 4rem;opacity:0;animation:fadeIn 1s 0.5s forwards;}
+.hero-right{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:5rem 4rem;opacity:0;animation:fadeIn 1s 0.5s ease-out forwards;}
 .hero-card{background:rgba(255,255,255,0.08);border:1px solid rgba(196,154,74,0.3);border-radius:4px;padding:2.5rem;max-width:380px;backdrop-filter:blur(8px);}
 .hero-card-quote{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;font-style:italic;color:var(--white);line-height:1.5;margin-bottom:2rem;}
 .hero-card-author{display:flex;align-items:center;gap:1rem;}
@@ -153,8 +164,7 @@ section{padding:6rem 5rem;}
 #about{background:var(--white);display:grid;grid-template-columns:1fr 300px 1fr;gap:3.5rem;align-items:start;padding:6rem 5rem;}
 .about-text p{color:var(--warm-text);margin-bottom:1.2rem;font-size:0.97rem;}
 .about-pillars{display:flex;flex-direction:column;gap:1.2rem;margin-top:2rem;}
-.pillar{display:flex;gap:1.2rem;align-items:flex-start;padding:1.2rem 1.5rem;border:1px solid var(--border);border-radius:3px;transition:border-color 0.2s,box-shadow 0.2s;}
-.pillar:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(196,154,74,0.1);}
+.pillar{display:flex;gap:1.2rem;align-items:flex-start;padding:1.2rem 1.5rem;border:1px solid var(--border);border-radius:3px;}
 .pillar-icon{width:40px;height:40px;flex-shrink:0;background:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
 .pillar-title{font-weight:500;font-size:0.9rem;color:var(--navy);margin-bottom:0.2rem;}
 .pillar-text{font-size:0.85rem;color:var(--muted);}
@@ -173,17 +183,15 @@ section{padding:6rem 5rem;}
 .services-header{text-align:center;margin-bottom:2rem;}
 .services-header .section-lead{margin:0 auto;}
 .services-tabs{display:flex;justify-content:center;border:1px solid var(--border);border-radius:3px;width:fit-content;margin:0 auto 3rem;overflow:hidden;}
-.tab-btn{padding:0.75rem 2.2rem;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;border:none;cursor:pointer;background:transparent;color:var(--muted);transition:all 0.2s;}
+.tab-btn{padding:0.75rem 2.2rem;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;border:none;cursor:pointer;background:transparent;color:var(--muted);transition:background-color 0.2s,color 0.2s;min-height:44px;}
 .tab-btn.active{background:var(--navy);color:var(--white);}
-.tab-btn:hover:not(.active){background:var(--cream-dark);color:var(--navy);}
+.tab-btn:hover:not(.active){background-color:var(--cream-dark);color:var(--navy);}
+.tab-btn:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
 .tab-panel{display:none;}
 .tab-panel.active{display:block;}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
 .services-grid-2col{grid-template-columns:repeat(2,1fr);max-width:900px;margin:0 auto;}
-.service-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:2rem;transition:box-shadow 0.3s,transform 0.3s,border-color 0.3s;position:relative;overflow:hidden;}
-.service-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height 0.3s;}
-.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,39,68,0.1);border-color:var(--gold);}
-.service-card:hover::before{height:100%;}
+.service-card{background:var(--white);border:1px solid var(--border);border-left:3px solid rgba(196,154,74,0.45);border-radius:4px;padding:2rem;}
 .service-icon{font-size:1.8rem;margin-bottom:1rem;}
 .service-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--navy);margin-bottom:0.6rem;}
 .service-age{display:inline-block;font-size:0.7rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border);padding:0.2rem 0.6rem;border-radius:2px;margin-bottom:0.8rem;}
@@ -194,22 +202,18 @@ section{padding:6rem 5rem;}
 
 /* WHY */
 #why{background:var(--navy);padding:6rem 5rem;position:relative;overflow:hidden;}
-#why::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(196,154,74,0.08) 0%,transparent 70%);}
 #why .section-title{color:var(--white);}
 #why .section-lead{color:rgba(255,255,255,0.5);}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;}
-.why-card{border:1px solid rgba(196,154,74,0.2);border-radius:4px;padding:2rem;transition:border-color 0.2s,background 0.2s;}
-.why-card:hover{border-color:var(--gold);background:rgba(196,154,74,0.04);}
+.why-card{border:1px solid rgba(196,154,74,0.2);border-radius:4px;padding:2rem;}
 .why-number{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--gold);opacity:0.4;line-height:1;margin-bottom:0.8rem;}
 .why-title{font-size:1rem;font-weight:500;color:var(--white);margin-bottom:0.5rem;}
 .why-text{font-size:0.85rem;color:rgba(255,255,255,0.5);}
 
 /* TESTIMONIALS */
 #testimonials{background:var(--navy);padding:6rem 5rem;position:relative;overflow:hidden;}
-#testimonials::before{content:'';position:absolute;top:-80px;left:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(196,154,74,0.07) 0%,transparent 70%);}
 .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem;}
-.testimonial-card{background:rgba(255,255,255,0.04);border:1px solid rgba(196,154,74,0.2);border-radius:4px;padding:2rem 2rem 1.5rem;transition:border-color 0.2s,background 0.2s;position:relative;}
-.testimonial-card:hover{border-color:var(--gold);background:rgba(196,154,74,0.04);}
+.testimonial-card{background:rgba(255,255,255,0.04);border:1px solid rgba(196,154,74,0.2);border-radius:4px;padding:2rem 2rem 1.5rem;position:relative;}
 .testimonial-quote-mark{font-family:'Cormorant Garamond',serif;font-size:5rem;line-height:0.6;color:var(--gold);opacity:0.35;margin-bottom:1rem;display:block;}
 .testimonial-text{font-size:0.95rem;color:rgba(255,255,255,0.8);line-height:1.75;font-style:italic;margin-bottom:1.5rem;}
 .testimonial-author{display:flex;align-items:center;gap:0.8rem;padding-top:1rem;border-top:1px solid rgba(196,154,74,0.15);}
@@ -230,9 +234,10 @@ section{padding:6rem 5rem;}
 #faq{background:var(--white);padding:6rem 5rem;}
 .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem;max-width:900px;margin-left:auto;margin-right:auto;}
 .faq-item{border:1px solid var(--border);border-radius:3px;overflow:hidden;}
-.faq-question{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;cursor:pointer;font-weight:500;font-size:0.9rem;color:var(--navy);background:var(--cream);gap:1rem;user-select:none;}
-.faq-question::after{content:'+';font-size:1.2rem;font-weight:300;color:var(--gold);flex-shrink:0;transition:transform 0.2s;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;cursor:pointer;font-weight:500;font-size:0.9rem;color:var(--navy);background:var(--cream);gap:1rem;user-select:none;width:100%;border:none;text-align:left;font-family:'DM Sans',sans-serif;min-height:44px;}
+.faq-question::after{content:'+';font-size:1.2rem;font-weight:300;color:var(--gold);flex-shrink:0;transition:transform 0.2s ease-out;}
 .faq-item.open .faq-question::after{transform:rotate(45deg);}
+.faq-question:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
 .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s;font-size:0.86rem;color:var(--muted);padding:0 1.5rem;}
 .faq-item.open .faq-answer{max-height:200px;padding:1rem 1.5rem 1.2rem;}
 
@@ -248,11 +253,19 @@ section{padding:6rem 5rem;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
 .form-group{margin-bottom:1.2rem;}
 .form-group label{display:block;font-size:0.75rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;}
+.form-group label .req{color:var(--error);margin-left:2px;font-style:normal;}
 .form-group input,.form-group select,.form-group textarea{width:100%;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:2px;font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--warm-text);background:var(--cream);transition:border-color 0.2s;outline:none;appearance:none;}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);background:var(--white);}
+.form-group input:focus-visible,.form-group select:focus-visible,.form-group textarea:focus-visible{outline:2px solid var(--gold);outline-offset:1px;}
+.form-group.has-error input,.form-group.has-error select,.form-group.has-error textarea{border-color:var(--error);}
+.field-error{font-size:0.78rem;color:var(--error);margin-top:0.3rem;display:none;}
+.field-error.visible{display:block;}
 .form-group textarea{resize:vertical;min-height:110px;}
-.form-submit{width:100%;background:var(--navy);color:var(--white);border:none;padding:0.9rem;font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background 0.2s,transform 0.2s;margin-top:0.5rem;}
-.form-submit:hover{background:var(--gold);transform:translateY(-1px);}
+.form-submit{width:100%;background:var(--navy);color:var(--white);border:none;padding:0.9rem;font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background-color 0.15s ease-out,transform 0.15s ease-out;margin-top:0.5rem;min-height:44px;}
+.form-submit:hover:not(:disabled){background-color:var(--gold);transform:translateY(-1px);}
+.form-submit:active:not(:disabled){transform:translateY(0) scale(0.99);}
+.form-submit:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+.form-submit:disabled{opacity:0.6;cursor:not-allowed;}
 .form-success{display:none;text-align:center;padding:2rem;color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.3rem;line-height:1.6;}
 
 /* FOOTER */
@@ -263,20 +276,25 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
 .footer-links{display:flex;gap:1.5rem;}
 .footer-links a{font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
 .footer-links a:hover{color:var(--gold);}
+.footer-links a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px;}
 
-/* WHATSAPP */
-.message-float{position:fixed;bottom:6.5rem;right:2rem;z-index:200;width:56px;height:56px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(26,39,68,0.3);text-decoration:none;transition:transform 0.2s,box-shadow 0.2s,background 0.2s;}
-.message-float:hover{transform:scale(1.1);background:var(--gold);box-shadow:0 6px 28px rgba(196,154,74,0.4);}
+/* FLOATING BUTTONS */
+.message-float{position:fixed;bottom:6.5rem;right:2rem;z-index:200;width:56px;height:56px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(26,39,68,0.3);text-decoration:none;transition:transform 0.2s ease-out,box-shadow 0.2s ease-out,background-color 0.2s ease-out;}
+.message-float:hover{transform:translateY(-3px);background-color:var(--gold);box-shadow:0 6px 28px rgba(196,154,74,0.4);}
+.message-float:active{transform:translateY(0);}
+.message-float:focus-visible{outline:2px solid var(--gold);outline-offset:4px;}
 .message-float svg{width:24px;height:24px;fill:white;}
-.whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:200;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;animation:waBounce 2s 3s ease-in-out 3;}
-.whatsapp-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5);}
+.whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:200;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:transform 0.2s ease-out,box-shadow 0.2s ease-out;animation:waBounce 2s 3s ease-in-out 3;}
+.whatsapp-float:hover{transform:translateY(-3px);box-shadow:0 6px 28px rgba(37,211,102,0.5);}
+.whatsapp-float:active{transform:translateY(0);}
+.whatsapp-float:focus-visible{outline:2px solid #25D366;outline-offset:4px;}
 .whatsapp-float svg{width:28px;height:28px;fill:white;}
 
 /* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-@keyframes waBounce{0%,100%{transform:scale(1);}50%{transform:scale(1.15);}}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease;}
+@keyframes waBounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease-out,transform 0.6s ease-out;}
 .reveal.visible{opacity:1;transform:none;}
 
 /* RESPONSIVE */
@@ -355,9 +373,18 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
   /* Footer */
   footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}
 }
+
+/* REDUCED MOTION */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;}
+  .hero-left,.hero-right{opacity:1;transform:none;animation:none;}
+  .reveal{opacity:1;transform:none;transition:none;}
+  .whatsapp-float{animation:none;}
+}
 </style>
 </head>
 <body>
+<a href="#services" class="skip-link">Skip to main content</a>
 
 <nav id="navbar">
   <a href="#hero" class="nav-logo">Assel <span>.</span></a>
@@ -373,11 +400,11 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
       <button class="lang-btn" onclick="setLang('ru')">RU</button>
     </div>
-    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
-<section id="hero">
+<section id="hero" aria-label="Introduction">
   <div class="hero-bg"></div>
   <div class="hero-left">
     <span class="hero-eyebrow" data-i18n="hero_eyebrow">Education Consultant · Dubai</span>
@@ -417,18 +444,18 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
   </div>
 </section>
 
-<section id="services">
+<section id="services" tabindex="-1">
   <div class="services-header reveal">
     <div class="section-eyebrow" data-i18n="svc_eyebrow">Services</div>
     <h2 class="section-title" data-i18n="svc_title">How I Can Help</h2>
     <p class="section-lead" data-i18n="svc_lead">Tailored support for children, parents, and adult learners — from early literacy to navigating Dubai's school landscape.</p>
   </div>
-  <div class="services-tabs reveal" style="margin-top:2rem;">
-    <button class="tab-btn active" data-tab="children" data-i18n="tab_children">For Children</button>
-    <button class="tab-btn" data-tab="parents" data-i18n="tab_parents">For Parents</button>
-    <button class="tab-btn" data-tab="adults" data-i18n="tab_adults">For Adults</button>
+  <div class="services-tabs reveal" style="margin-top:2rem;" role="tablist" aria-label="Service categories">
+    <button class="tab-btn active" data-tab="children" data-i18n="tab_children" role="tab" aria-selected="true" aria-controls="tab-children">For Children</button>
+    <button class="tab-btn" data-tab="parents" data-i18n="tab_parents" role="tab" aria-selected="false" aria-controls="tab-parents">For Parents</button>
+    <button class="tab-btn" data-tab="adults" data-i18n="tab_adults" role="tab" aria-selected="false" aria-controls="tab-adults">For Adults</button>
   </div>
-  <div class="tab-panel active" id="tab-children">
+  <div class="tab-panel active" id="tab-children" role="tabpanel" aria-hidden="false">
     <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-icon">🔤</div>
@@ -481,7 +508,7 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
       </div>
     </div>
   </div>
-  <div class="tab-panel" id="tab-parents">
+  <div class="tab-panel" id="tab-parents" role="tabpanel" aria-hidden="true">
     <div class="services-grid services-grid-2col">
       <div class="service-card reveal">
         <div class="service-icon">🏫</div>
@@ -510,7 +537,7 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
       </div>
     </div>
   </div>
-  <div class="tab-panel" id="tab-adults">
+  <div class="tab-panel" id="tab-adults" role="tabpanel" aria-hidden="true">
     <div class="services-grid services-grid-2col">
       <div class="service-card reveal">
         <div class="service-icon">💼</div>
@@ -542,7 +569,7 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
   </div>
 </section>
 
-<section id="about">
+<section id="about" tabindex="-1">
   <div class="about-text reveal">
     <div class="section-eyebrow" data-i18n="about_eyebrow">About</div>
     <h2 class="section-title" data-i18n="about_title">Teacher. Researcher.<br>Your Family's Advocate.</h2>
@@ -557,7 +584,7 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
     </div>
   </div>
   <div class="about-photo-wrap reveal">
-    <img src="Assel_Profile.png" alt="Assel Csonka-Stambekova — Private English Tutor in Dubai" class="about-photo">
+    <img src="Assel_Profile.png" alt="Assel Csonka-Stambekova — Private English Tutor in Dubai" class="about-photo" loading="lazy" width="300" height="400">
     <div class="about-photo-badge">Dubai, UAE · <span data-i18n="badge_available">Available Now</span></div>
   </div>
   <div class="credentials-list reveal">
@@ -630,12 +657,12 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
     <h2 class="section-title" data-i18n="faq_title">Common Questions</h2>
   </div>
   <div class="faq-grid reveal">
-    <div class="faq-item"><div class="faq-question" data-i18n="faq1_q">Do you offer online or in-person sessions?</div><div class="faq-answer" data-i18n="faq1_a">Both. In-person sessions are available in Dubai. Online sessions are available for families anywhere in the world — particularly useful for families relocating to Dubai.</div></div>
-    <div class="faq-item"><div class="faq-question" data-i18n="faq2_q">What age groups do you work with?</div><div class="faq-answer" data-i18n="faq2_a">Children aged 3.5–18 for tutoring. School consulting and academic advisory are for parents of children of any school age.</div></div>
-    <div class="faq-item"><div class="faq-question" data-i18n="faq3_q">How do sessions work for young children?</div><div class="faq-answer" data-i18n="faq3_a">Sessions are structured but playful, tailored to short attention spans. Each child gets a personalised learning plan — typically 45–60 minutes. Progress is shared with parents regularly.</div></div>
-    <div class="faq-item"><div class="faq-question" data-i18n="faq4_q">Which Dubai schools are you familiar with?</div><div class="faq-answer" data-i18n="faq4_a">I have broad knowledge across Dubai's full private school sector — British, American, IB, Indian, and more — and stay current with KHDA inspection reports.</div></div>
-    <div class="faq-item"><div class="faq-question" data-i18n="faq5_q">Do you have affiliations with any schools?</div><div class="faq-answer" data-i18n="faq5_a">None. I accept no referral fees or commissions. My advice is entirely independent and based solely on what's right for your child.</div></div>
-    <div class="faq-item"><div class="faq-question" data-i18n="faq6_q">Do you offer packages or one-off sessions?</div><div class="faq-answer" data-i18n="faq6_a">Both. Regular weekly sessions produce the best results for tutoring. For consulting, many families find a single structured session gives them all the clarity they need.</div></div>
+    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq1_q" aria-expanded="false">Do you offer online or in-person sessions?</button><div class="faq-answer" data-i18n="faq1_a">Both. In-person sessions are available in Dubai. Online sessions are available for families anywhere in the world — particularly useful for families relocating to Dubai.</div></div>
+    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq2_q" aria-expanded="false">What age groups do you work with?</button><div class="faq-answer" data-i18n="faq2_a">Children aged 3.5–18 for tutoring. School consulting and academic advisory are for parents of children of any school age.</div></div>
+    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq3_q" aria-expanded="false">How do sessions work for young children?</button><div class="faq-answer" data-i18n="faq3_a">Sessions are structured but playful, tailored to short attention spans. Each child gets a personalised learning plan — typically 45–60 minutes. Progress is shared with parents regularly.</div></div>
+    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq4_q" aria-expanded="false">Which Dubai schools are you familiar with?</button><div class="faq-answer" data-i18n="faq4_a">I have broad knowledge across Dubai's full private school sector — British, American, IB, Indian, and more — and stay current with KHDA inspection reports.</div></div>
+    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq5_q" aria-expanded="false">Do you have affiliations with any schools?</button><div class="faq-answer" data-i18n="faq5_a">None. I accept no referral fees or commissions. My advice is entirely independent and based solely on what's right for your child.</div></div>
+    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq6_q" aria-expanded="false">Do you offer packages or one-off sessions?</button><div class="faq-answer" data-i18n="faq6_a">Both. Regular weekly sessions produce the best results for tutoring. For consulting, many families find a single structured session gives them all the clarity they need.</div></div>
   </div>
 </section>
 
@@ -654,10 +681,10 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
       <h3 class="form-title" data-i18n="form_title">Send a Message</h3>
       <div id="contact-form-inner">
         <div class="form-row">
-          <div class="form-group"><label data-i18n="form_fname">First Name</label><input type="text" id="fname" placeholder="Sarah"></div>
+          <div class="form-group" id="group-fname"><label data-i18n="form_fname">First Name<em class="req" aria-hidden="true">*</em></label><input type="text" id="fname" placeholder="Sarah" required aria-required="true" aria-describedby="err-fname"><p class="field-error" id="err-fname" role="alert">Please enter your first name.</p></div>
           <div class="form-group"><label data-i18n="form_lname">Last Name</label><input type="text" id="lname" placeholder="Al Rashidi"></div>
         </div>
-        <div class="form-group"><label data-i18n="form_email">Email Address</label><input type="email" id="femail" placeholder="you@example.com"></div>
+        <div class="form-group" id="group-femail"><label data-i18n="form_email">Email Address<em class="req" aria-hidden="true">*</em></label><input type="email" id="femail" placeholder="you@example.com" required aria-required="true" aria-describedby="err-femail"><p class="field-error" id="err-femail" role="alert">Please enter a valid email address.</p></div>
         <div class="form-group">
           <label data-i18n="form_service">I'm interested in</label>
           <select id="service">
@@ -677,7 +704,7 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
           <div class="form-group"><label data-i18n="form_age">Child's Age (if applicable)</label><input type="text" id="age" placeholder="e.g. 6 years old"></div>
           <div class="form-group"><label data-i18n="form_phone">WhatsApp / Phone <span style="color:var(--muted);font-weight:300;text-transform:none;letter-spacing:0;">(optional)</span></label><input type="tel" id="phone" placeholder="e.g. +971 50 000 0000"></div>
         </div>
-        <div class="form-group"><label data-i18n="form_msg">Your Message</label><textarea id="message" placeholder="Tell me a little about your child and what you're looking for…"></textarea></div>
+        <div class="form-group" id="group-message"><label data-i18n="form_msg">Your Message<em class="req" aria-hidden="true">*</em></label><textarea id="message" placeholder="Tell me a little about your child and what you're looking for…" required aria-required="true" aria-describedby="err-message"></textarea><p class="field-error" id="err-message" role="alert">Please include a short message.</p></div>
         <button class="form-submit" onclick="submitForm()" data-i18n="form_btn">Send Message →</button>
       </div>
       <div class="form-success" id="form-success">
@@ -728,23 +755,32 @@ window.addEventListener('scroll',()=>nb.classList.toggle('scrolled',scrollY>50))
 
 // Hamburger
 const hb=document.getElementById('hamburger'),nl=document.getElementById('nav-links');
-hb.addEventListener('click',()=>nl.classList.toggle('open'));
-nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
+hb.addEventListener('click',()=>{
+  const open=nl.classList.toggle('open');
+  hb.setAttribute('aria-expanded',String(open));
+  hb.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+});
+nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  nl.classList.remove('open');
+  hb.setAttribute('aria-expanded','false');
+  hb.setAttribute('aria-label','Open navigation menu');
+}));
 
 // Tabs
 document.querySelectorAll('.tab-btn').forEach(btn=>btn.addEventListener('click',()=>{
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false');});
+  document.querySelectorAll('.tab-panel').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-hidden','true');});
   btn.classList.add('active');
+  btn.setAttribute('aria-selected','true');
   const p=document.getElementById('tab-'+btn.dataset.tab);
-  if(p)p.classList.add('active');
+  if(p){p.classList.add('active');p.setAttribute('aria-hidden','false');}
 }));
 
 // FAQ
 document.querySelectorAll('.faq-question').forEach(q=>q.addEventListener('click',()=>{
   const item=q.parentElement,was=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-  if(!was)item.classList.add('open');
+  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');});
+  if(!was){item.classList.add('open');q.setAttribute('aria-expanded','true');}
 }));
 
 // Reveal
@@ -756,15 +792,35 @@ if('IntersectionObserver' in window){
 
 // Form — sign up at formspree.io, set email to assel@assel-edu.org, paste your form ID below
 const FURL='https://formspree.io/f/YOUR_FORM_ID';
+function showFieldError(groupId,errorId,show){
+  const g=document.getElementById(groupId),e=document.getElementById(errorId);
+  if(!g||!e)return;
+  g.classList.toggle('has-error',show);
+  e.classList.toggle('visible',show);
+}
+function clearFormErrors(){
+  ['group-fname','group-femail','group-message'].forEach(id=>{const g=document.getElementById(id);if(g)g.classList.remove('has-error');});
+  ['err-fname','err-femail','err-message'].forEach(id=>{const e=document.getElementById(id);if(e)e.classList.remove('visible');});
+}
 async function submitForm(){
-  const fn=document.getElementById('fname').value.trim(),ln=document.getElementById('lname').value.trim(),em=document.getElementById('femail').value.trim(),sv=document.getElementById('service').value,ag=document.getElementById('age').value.trim(),ms=document.getElementById('message').value.trim();
-  if(!fn||!em||!ms){alert(lang==='ru'?'Пожалуйста, заполните имя, email и сообщение.':'Please fill in your name, email, and message.');return;}
+  clearFormErrors();
+  const fn=document.getElementById('fname').value.trim(),
+        ln=document.getElementById('lname').value.trim(),
+        em=document.getElementById('femail').value.trim(),
+        sv=document.getElementById('service').value,
+        ag=document.getElementById('age').value.trim(),
+        ms=document.getElementById('message').value.trim();
+  let hasError=false;
+  if(!fn){showFieldError('group-fname','err-fname',true);hasError=true;}
+  if(!em||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){showFieldError('group-femail','err-femail',true);hasError=true;}
+  if(!ms){showFieldError('group-message','err-message',true);hasError=true;}
+  if(hasError){const first=document.querySelector('.field-error.visible');if(first)first.previousElementSibling.focus();return;}
   const btn=document.querySelector('.form-submit');btn.textContent=lang==='ru'?'Отправка…':'Sending…';btn.disabled=true;
   try{
     const r=await fetch(FURL,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify({name:(fn+' '+ln).trim(),email:em,phone:document.getElementById('phone').value.trim()||'Not provided',service:sv||'Not specified',child_age:ag||'N/A',message:ms})});
     if(r.ok){document.getElementById('contact-form-inner').style.display='none';document.getElementById('form-success').style.display='block';}
-    else{btn.textContent=T[lang].form_btn;btn.disabled=false;alert('Something went wrong. Please email assel@assel-edu.org directly.');}
-  }catch(e){btn.textContent=T[lang].form_btn;btn.disabled=false;alert('Could not send. Please email assel@assel-edu.org directly.');}
+    else{btn.textContent=T[lang].form_btn;btn.disabled=false;document.getElementById('form-success').style.display='none';document.getElementById('contact-form-inner').style.display='block';const errMsg=document.createElement('p');errMsg.style.cssText='color:var(--error);font-size:0.85rem;margin-top:0.5rem;';errMsg.textContent='Something went wrong. Please email assel@assel-edu.org directly.';btn.parentNode.insertBefore(errMsg,btn.nextSibling);}
+  }catch(e){btn.textContent=T[lang].form_btn;btn.disabled=false;}
 }
 </script>
 </body>
