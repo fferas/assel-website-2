@@ -232,14 +232,17 @@ section{padding:6rem 5rem;}
 
 /* FAQ */
 #faq{background:var(--white);padding:6rem 5rem;}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem;max-width:900px;margin-left:auto;margin-right:auto;}
-.faq-item{border:1px solid var(--border);border-radius:3px;overflow:hidden;}
-.faq-question{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;cursor:pointer;font-weight:500;font-size:0.9rem;color:var(--navy);background:var(--cream);gap:1rem;user-select:none;width:100%;border:none;text-align:left;font-family:'DM Sans',sans-serif;min-height:44px;}
-.faq-question::after{content:'+';font-size:1.2rem;font-weight:300;color:var(--gold);flex-shrink:0;transition:transform 0.2s ease-out;}
-.faq-item.open .faq-question::after{transform:rotate(45deg);}
+.faq-grid{display:flex;flex-direction:column;gap:0;margin-top:3rem;max-width:680px;margin-left:auto;margin-right:auto;border:1px solid var(--border);border-radius:4px;overflow:hidden;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-item:last-child{border-bottom:none;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 1.8rem;cursor:pointer;font-weight:500;font-size:0.95rem;color:var(--navy);background:var(--white);gap:1.5rem;user-select:none;width:100%;border:none;text-align:left;font-family:'DM Sans',sans-serif;min-height:44px;transition:background-color 0.15s,color 0.15s;line-height:1.4;}
+.faq-question:hover{background-color:var(--cream);}
+.faq-item.open .faq-question{background-color:var(--cream);color:var(--navy);}
+.faq-toggle{width:28px;height:28px;flex-shrink:0;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:300;color:var(--gold);transition:background-color 0.15s,border-color 0.15s,transform 0.25s ease-out;line-height:1;}
+.faq-item.open .faq-toggle{background-color:var(--navy);border-color:var(--navy);color:var(--white);transform:rotate(45deg);}
 .faq-question:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
-.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s;font-size:0.86rem;color:var(--muted);padding:0 1.5rem;}
-.faq-item.open .faq-answer{max-height:200px;padding:1rem 1.5rem 1.2rem;}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s;font-size:0.9rem;color:var(--muted);padding:0 1.8rem;line-height:1.7;}
+.faq-item.open .faq-answer{max-height:300px;padding:0 1.8rem 1.4rem;}
 
 /* CONTACT */
 #contact{background:var(--cream);padding:6rem 5rem;}
@@ -311,7 +314,7 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
   .why-grid{grid-template-columns:1fr 1fr;}
   .process-steps{grid-template-columns:1fr;}
   .process-steps::before{display:none;}
-  .faq-grid{grid-template-columns:1fr;}
+  .faq-grid{max-width:100%;}
   .contact-wrapper{grid-template-columns:1fr;gap:3rem;}
   footer{padding:2rem;flex-direction:column;text-align:center;}
   .about-photo{max-width:240px;}
@@ -657,12 +660,12 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
     <h2 class="section-title" data-i18n="faq_title">Common Questions</h2>
   </div>
   <div class="faq-grid reveal">
-    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq1_q" aria-expanded="false">Do you offer online or in-person sessions?</button><div class="faq-answer" data-i18n="faq1_a">Both. In-person sessions are available in Dubai. Online sessions are available for families anywhere in the world — particularly useful for families relocating to Dubai.</div></div>
-    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq2_q" aria-expanded="false">What age groups do you work with?</button><div class="faq-answer" data-i18n="faq2_a">Children aged 3.5–18 for tutoring. School consulting and academic advisory are for parents of children of any school age.</div></div>
-    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq3_q" aria-expanded="false">How do sessions work for young children?</button><div class="faq-answer" data-i18n="faq3_a">Sessions are structured but playful, tailored to short attention spans. Each child gets a personalised learning plan — typically 45–60 minutes. Progress is shared with parents regularly.</div></div>
-    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq4_q" aria-expanded="false">Which Dubai schools are you familiar with?</button><div class="faq-answer" data-i18n="faq4_a">I have broad knowledge across Dubai's full private school sector — British, American, IB, Indian, and more — and stay current with KHDA inspection reports.</div></div>
-    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq5_q" aria-expanded="false">Do you have affiliations with any schools?</button><div class="faq-answer" data-i18n="faq5_a">None. I accept no referral fees or commissions. My advice is entirely independent and based solely on what's right for your child.</div></div>
-    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq6_q" aria-expanded="false">Do you offer packages or one-off sessions?</button><div class="faq-answer" data-i18n="faq6_a">Both. Regular weekly sessions produce the best results for tutoring. For consulting, many families find a single structured session gives them all the clarity they need.</div></div>
+    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq1_q" aria-expanded="false">Do you offer online or in-person sessions?<span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-answer" data-i18n="faq1_a">Both. In-person sessions are available in Dubai. Online sessions are available for families anywhere in the world — particularly useful for families relocating to Dubai.</div></div>
+    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq2_q" aria-expanded="false">What age groups do you work with?<span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-answer" data-i18n="faq2_a">Children aged 3.5–18 for tutoring. School consulting and academic advisory are for parents of children of any school age.</div></div>
+    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq3_q" aria-expanded="false">How do sessions work for young children?<span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-answer" data-i18n="faq3_a">Sessions are structured but playful, tailored to short attention spans. Each child gets a personalised learning plan — typically 45–60 minutes. Progress is shared with parents regularly.</div></div>
+    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq4_q" aria-expanded="false">Which Dubai schools are you familiar with?<span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-answer" data-i18n="faq4_a">I have broad knowledge across Dubai's full private school sector — British, American, IB, Indian, and more — and stay current with KHDA inspection reports.</div></div>
+    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq5_q" aria-expanded="false">Do you have affiliations with any schools?<span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-answer" data-i18n="faq5_a">None. I accept no referral fees or commissions. My advice is entirely independent and based solely on what's right for your child.</div></div>
+    <div class="faq-item"><button type="button" class="faq-question" data-i18n="faq6_q" aria-expanded="false">Do you offer packages or one-off sessions?<span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-answer" data-i18n="faq6_a">Both. Regular weekly sessions produce the best results for tutoring. For consulting, many families find a single structured session gives them all the clarity they need.</div></div>
   </div>
 </section>
 
