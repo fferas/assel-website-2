@@ -301,27 +301,27 @@ footer{background:var(--navy);padding:2.5rem 5rem;display:flex;align-items:cente
 .back-to-top:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
 .back-to-top svg{width:16px;height:16px;fill:currentColor;}
 
-/* FLOATING BUTTONS */
-.message-float{position:fixed;bottom:18rem;right:2rem;z-index:200;width:52px;height:52px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(26,39,68,0.3);text-decoration:none;transition:transform 0.2s ease-out,box-shadow 0.2s ease-out,background-color 0.2s ease-out;}
-.message-float:hover{transform:translateY(-3px);background-color:var(--gold);box-shadow:0 6px 28px rgba(196,154,74,0.4);}
+/* FLOATING BUTTONS — all 52px, stacked bottom:1.5rem with 1rem gaps */
+.message-float{position:fixed;bottom:14.25rem;right:1.75rem;z-index:200;width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(196,154,74,0.45);text-decoration:none;transition:transform 0.2s ease-out,box-shadow 0.2s ease-out,background-color 0.2s ease-out;}
+.message-float:hover{transform:translateY(-3px);background-color:#b08840;box-shadow:0 6px 28px rgba(196,154,74,0.55);}
 .message-float:active{transform:translateY(0);}
 .message-float:focus-visible{outline:2px solid var(--gold);outline-offset:4px;}
-.message-float svg{width:22px;height:22px;fill:white;}
-.linkedin-float{position:fixed;bottom:12rem;right:2rem;z-index:200;width:52px;height:52px;background:#0A66C2;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(10,102,194,0.4);text-decoration:none;transition:transform 0.2s ease-out,box-shadow 0.2s ease-out;}
+.message-float svg{width:22px;height:22px;fill:var(--navy);}
+.linkedin-float{position:fixed;bottom:10rem;right:1.75rem;z-index:200;width:52px;height:52px;background:#0A66C2;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(10,102,194,0.4);text-decoration:none;transition:transform 0.2s ease-out,box-shadow 0.2s ease-out;}
 .linkedin-float:hover{transform:translateY(-3px);box-shadow:0 6px 28px rgba(10,102,194,0.5);}
 .linkedin-float:active{transform:translateY(0);}
 .linkedin-float:focus-visible{outline:2px solid #0A66C2;outline-offset:4px;}
 .linkedin-float svg{width:24px;height:24px;fill:white;}
-.instagram-float{position:fixed;bottom:6.5rem;right:2rem;z-index:200;width:52px;height:52px;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(214,36,159,0.35);text-decoration:none;transition:transform 0.2s ease-out,box-shadow 0.2s ease-out;}
+.instagram-float{position:fixed;bottom:5.75rem;right:1.75rem;z-index:200;width:52px;height:52px;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(214,36,159,0.35);text-decoration:none;transition:transform 0.2s ease-out,box-shadow 0.2s ease-out;}
 .instagram-float:hover{transform:translateY(-3px);box-shadow:0 6px 28px rgba(214,36,159,0.5);}
 .instagram-float:active{transform:translateY(0);}
 .instagram-float:focus-visible{outline:2px solid #d6249f;outline-offset:4px;}
 .instagram-float svg{width:24px;height:24px;fill:white;}
-.whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:200;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:transform 0.2s ease-out,box-shadow 0.2s ease-out;animation:waBounce 2s 3s ease-in-out 3;}
+.whatsapp-float{position:fixed;bottom:1.5rem;right:1.75rem;z-index:200;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:transform 0.2s ease-out,box-shadow 0.2s ease-out;animation:waBounce 2s 3s ease-in-out 3;}
 .whatsapp-float:hover{transform:translateY(-3px);box-shadow:0 6px 28px rgba(37,211,102,0.5);}
 .whatsapp-float:active{transform:translateY(0);}
 .whatsapp-float:focus-visible{outline:2px solid #25D366;outline-offset:4px;}
-.whatsapp-float svg{width:28px;height:28px;fill:white;}
+.whatsapp-float svg{width:26px;height:26px;fill:white;}
 
 /* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
